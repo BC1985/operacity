@@ -2,7 +2,7 @@
 
 .nav {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
 }
 .nav-links {
   background: #000;
@@ -16,16 +16,4 @@
 .nav-links li {
   list-style-type: none;
   font-weight: bold;
-}
-
-.hamburger-icon {
-  position: relative;
-  top: 0;
-  left: 20px;
-}
-.hamburger-icon div {
-  width: 30px;
-  height: 3px;
-  background: rgb(226, 226, 226);
-  margin: 5px;
 }
