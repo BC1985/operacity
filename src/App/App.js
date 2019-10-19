@@ -16,8 +16,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        <NavToggleButton openSideNav={this.openSideNav} />
-        {this.state.isSideNavOpen && <Nav />}
+        <NavToggleButton
+          openSideNav={this.openSideNav}
+          isSideNavOpen={this.state.isSideNavOpen}
+        />
+        <Nav show={this.state.isSideNavOpen} />
         <Header />
       </div>
     );
