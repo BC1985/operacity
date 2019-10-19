@@ -1,6 +1,6 @@
 /* for ipad and desktop */
 
-/* .nav {
+.nav {
   position: absolute;
   z-index: 2;
 }
@@ -9,7 +9,20 @@
   justify-content: space-evenly;
 }
 .nav-links li {
+  display: none;
   list-style-type: none;
   margin-right: 10px;
   font-weight: bold;
-} */
+}
+
+.hamburger-icon {
+  position: relative;
+  top: 0;
+  left: 20px;
+}
+.hamburger-icon div {
+  width: 30px;
+  height: 3px;
+  background: rgb(226, 226, 226);
+  margin: 5px;
+}
