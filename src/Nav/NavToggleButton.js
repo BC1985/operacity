@@ -28,17 +28,17 @@ class NavToggleButton extends Component {
         transition: "all 0.3s ease"
       },
       lineTop: {
-        transform: this.state.isOpen ? "rotate(45deg)" : "none",
+        transform: this.props.isSideNavOpen ? "rotate(50deg)" : "none",
         transformOrigin: "top left",
         marginBottom: "5px"
       },
       lineMiddle: {
-        opacity: this.state.isOpen ? 0 : 1,
-        transform: this.props.isOpen ? "translateX(-16px)" : "none"
+        opacity: this.props.isSideNavOpen ? 0 : 1,
+        transform: this.props.isSideNavOpen ? "translateX(-16px)" : "none"
       },
       lineBottom: {
-        transform: this.state.isOpen
-          ? "translateX(-1px) rotate(-45deg)"
+        transform: this.props.isSideNavOpen
+          ? "translateX(-1px) rotate(-50deg)"
           : "none",
         transformOrigin: "top left",
         marginTop: "5px"
@@ -46,7 +46,7 @@ class NavToggleButton extends Component {
     };
     return (
       <div>
-        <div style={{ ...styles.hamburgerIcon }} onClick={this.openSideNav}>
+        <div id="hamburger-icon" onClick={this.props.openSideNav}>
           <div style={{ ...styles.line, ...styles.lineTop }} />
           <div style={{ ...styles.line, ...styles.lineMiddle }} />
           <div style={{ ...styles.line, ...styles.lineBottom }} />
