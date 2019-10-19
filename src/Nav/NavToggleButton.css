@@ -1,9 +1,9 @@
-.hamburger-icon {
+#hamburger-icon {
   position: absolute;
   padding: 20px;
   z-index: 2;
 }
-.hamburger-icon div {
+#hamburger-icon div {
   width: 30px;
   height: 5px;
   background: rgb(226, 226, 226);
