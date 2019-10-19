@@ -5,6 +5,9 @@
   z-index: 3;
 }
 .nav-links {
+  transform: translateX(-100%);
+  transition: 1s;
+
   background: #000;
   display: flex;
   width: 100%;
@@ -12,6 +15,10 @@
   height: 100vh;
   justify-content: space-evenly;
   margin-block-start: 0;
+}
+.nav-links.open {
+  transform: translateX(0%);
+  transition: 1s;
 }
 .nav-links li {
   list-style-type: none;
