@@ -4,7 +4,8 @@ import Nav from "../Nav/Nav";
 import "./App.css";
 import NavToggleButton from "../Nav/NavToggleButton";
 import LandscapeNav from "../Nav/LandscapeNav";
-
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import About from "../About/About";
 class App extends Component {
   state = {
     isSideNavOpen: false
@@ -17,13 +18,18 @@ class App extends Component {
   render() {
     return (
       <div>
-        <NavToggleButton
-          openSideNav={this.openSideNav}
-          isSideNavOpen={this.state.isSideNavOpen}
-        />
-        <LandscapeNav />
-        <Nav show={this.state.isSideNavOpen} />
-        <Header />
+        <Router>
+          <NavToggleButton
+            openSideNav={this.openSideNav}
+            isSideNavOpen={this.state.isSideNavOpen}
+          />
+          <Nav show={this.state.isSideNavOpen} />
+          <Route component={LandscapeNav} />
+          <Switch>
+            <Header exact path="/" />
+            <Route path="/about" component={About} />
+          </Switch>
+        </Router>
       </div>
     );
   }
