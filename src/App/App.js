@@ -3,6 +3,7 @@ import Header from "../Header/Header";
 import Nav from "../Nav/Nav";
 import "./App.css";
 import NavToggleButton from "../Nav/NavToggleButton";
+import LandscapeNav from "../Nav/LandscapeNav";
 
 class App extends Component {
   state = {
@@ -20,6 +21,7 @@ class App extends Component {
           openSideNav={this.openSideNav}
           isSideNavOpen={this.state.isSideNavOpen}
         />
+        <LandscapeNav />
         <Nav show={this.state.isSideNavOpen} />
         <Header />
       </div>
