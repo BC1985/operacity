@@ -1,48 +1,67 @@
-/* for ipad and desktop */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .nav {
+    position: absolute;
+    z-index: 3;
+  }
+  .nav-links {
+    transform: translateX(-100%);
+    transition: 1s;
+    background: #000;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    margin-block-start: 0;
+  }
+  .nav-links.open {
+    transform: translateX(0%);
+    transition: 1s;
+  }
+  .nav-links.open li {
+    opacity: 1;
+  }
 
-.nav {
-  position: absolute;
-  z-index: 3;
+  .nav-links li {
+    font-size: 1.2em;
+    margin: 20px;
+    list-style-type: none;
+    font-weight: bold;
+    opacity: 0;
+  }
+  .nav-links li:nth-child(1) {
+    transition: all 0.6s ease 0.3s;
+  }
+  .nav-links li:nth-child(2) {
+    transition: all 0.5s ease 0.4s;
+  }
+  .nav-links li:nth-child(3) {
+    transition: all 0.5s ease 0.5s;
+  }
+  .nav-links li:nth-child(4) {
+    transition: all 0.5s ease 0.6s;
+  }
+  .nav-links li:nth-child(5) {
+    transition: all 0.5s ease 0.7s;
+  }
 }
-.nav-links {
-  transform: translateX(-100%);
-  transition: 1s;
-
-  background: #000;
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: center;
-  margin-block-start: 0;
-}
-.nav-links.open {
-  transform: translateX(0%);
-  transition: 1s;
-}
-.nav-links.open li {
-  opacity: 1;
-}
-
-.nav-links li {
-  font-size: 1.2em;
-  margin: 20px;
-  list-style-type: none;
-  font-weight: bold;
-  opacity: 0;
-}
-.nav-links li:nth-child(1) {
-  transition: all 0.6s ease 0.3s;
-}
-.nav-links li:nth-child(2) {
-  transition: all 0.5s ease 0.4s;
-}
-.nav-links li:nth-child(3) {
-  transition: all 0.5s ease 0.5s;
-}
-.nav-links li:nth-child(4) {
-  transition: all 0.5s ease 0.6s;
-}
-.nav-links li:nth-child(5) {
-  transition: all 0.5s ease 0.7s;
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .nav {
+    position: relative;
+  }
+  .nav-links {
+    position: absolute;
+    background: transparent;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    height: 30px;
+    justify-content: center;
+  }
+  .nav-links.open {
+    margin-block-start: 0px;
+    transform: translateX(0%);
+    transition: 1s;
+  }
 }
