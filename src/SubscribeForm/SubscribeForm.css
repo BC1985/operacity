@@ -1,0 +1,52 @@
+:root {
+  --bg-color: rgb(45, 44, 49);
+}
+.wrapper {
+  background: var(--bg-color);
+  padding: 20% 15%;
+  color: white;
+  height: 100vh;
+}
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+.form-container input {
+  background: var(--bg-color);
+  display: block;
+  border: none;
+  padding: 10px 0;
+  border-bottom: white 1px solid;
+}
+.form-container input::placeholder {
+  color: white;
+}
+
+.form-container label {
+  margin: 10px 0;
+}
+#submit-button {
+  margin: 40px 0;
+  font-size: 1em;
+  padding: 10px 30px;
+  background: rgb(230, 226, 13);
+  font-weight: bold;
+  border: none;
+  color: rgb(136, 60, 17);
+}
+
+.logo-container {
+  text-align: center;
+}
+#logo-sm {
+  font-size: 2em;
+}
+
+.logo-container p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-bottom: 20px;
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+  font-size: 2em;
+}
