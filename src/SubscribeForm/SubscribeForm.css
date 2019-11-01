@@ -2,26 +2,29 @@
   --bg-color: rgb(45, 44, 49);
 }
 .wrapper {
+  position: relative;
   background: var(--bg-color);
   padding: 20% 15%;
   color: white;
   height: 100vh;
+  z-index: 2;
 }
 .form-container form {
   display: flex;
   flex-direction: column;
 }
-.form-container input {
+.form-input {
   background: var(--bg-color);
   display: block;
   border: none;
   padding: 10px 0;
-  border-bottom: white 1px solid;
-}
-.form-container input::placeholder {
+  border-bottom: rgb(255, 255, 255, 0.5) 1px solid;
   color: white;
+  font-size: 1em;
 }
-
+.form-input:focus {
+  outline-style: none;
+}
 .form-container label {
   margin: 10px 0;
 }
@@ -49,4 +52,28 @@
   font-family: "Dancing Script", cursive;
   font-weight: bold;
   font-size: 2em;
+  z-index: 1;
+}
+.square {
+  width: 30vw;
+  height: 30%;
+  position: absolute;
+  top: 0;
+  left: 30vh;
+  background: rgba(155, 128, 10, 0.4);
+  z-index: -1;
+}
+.form-label {
+  position: relative;
+  font-size: 16px;
+  left: 0;
+  top: 35px;
+  color: whitesmoke;
+  transition: all 0.3s ease-out;
+}
+
+.focused {
+  font-size: 0.85rem;
+  color: #999;
+  transform: translateY(-150%);
 }
