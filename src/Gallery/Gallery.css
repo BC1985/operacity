@@ -1,0 +1,16 @@
+:root {
+  --bg-color: rgb(45, 44, 49);
+}
+.thumbnails-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-wrapper {
+  position: relative;
+  background: var(--bg-color);
+  padding: 20% 15%;
+  color: white;
+  height: 150vh;
+  z-index: 2;
+}
