@@ -51,11 +51,7 @@ class App extends Component {
           <Switch>
             <Header exact path="/" />
             <Route path="/about" component={About} routes={routes} />
-            <Route
-              path="/subscribe"
-              component={SubscribeForm}
-              routes={routes}
-            />
+            <Route path="/subscribe" component={SubscribeForm} />
           </Switch>
         </Router>
       </div>
