@@ -79,3 +79,34 @@
     transform: skewY(45deg);
   }
 }
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  .container {
+    padding: 10%;
+  }
+  .text {
+    line-height: 1.3em;
+    font-size: 1.2em;
+    color: black;
+    border-radius: 10px;
+  }
+  img {
+    border: 2px gray solid;
+    width: 100%;
+  }
+  /* shapes */
+  .container::before {
+    content: "";
+    width: 100vw;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(240, 68, 6, 0.3);
+    transform-origin: top left;
+    z-index: -1;
+    transform: skewY(60deg);
+  }
+}
