@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./Nav.css";
 
 function Nav(props) {
@@ -9,11 +10,13 @@ function Nav(props) {
   return (
     <nav className="nav">
       <ul className={sideNavClass}>
-        <li>About</li>
-        <li>Program</li>
-        <li>Gallery</li>
-        <li>Tickets</li>
-        <li>Contact</li>
+        {props.routes.map(route => (
+          <li key={route.name}>
+            <NavLink to={route.to} onClick={route.onClick}>
+              {route.name}
+            </NavLink>
+          </li>
+        ))}
       </ul>
     </nav>
   );
