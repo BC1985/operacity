@@ -82,7 +82,7 @@
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
 
 /* Landscape */
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+@media only screen and (min-device-width: 414px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
   .container {
     padding: 10%;
   }
@@ -108,5 +108,34 @@
     transform-origin: top left;
     z-index: -1;
     transform: skewY(60deg);
+  }
+}
+/*  ----- iPhone X ------- */
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  /* shapes */
+  .container::before {
+    content: "";
+    width: 100vw;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(240, 68, 6, 0.3);
+    transform-origin: top left;
+    z-index: -1;
+    transform: skewY(50deg);
+  }
+  .text::before {
+    content: "";
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    background: rgba(202, 90, 25, 0.3);
+    top: 1;
+    left: 0;
+    transform-origin: top right;
+    transform: skewY(15deg);
+    z-index: -1;
   }
 }
