@@ -54,6 +54,7 @@
   font-size: 2em;
   z-index: 1;
 }
+/* shape */
 .square {
   width: 30vw;
   height: 30%;
@@ -76,4 +77,26 @@
   font-size: 0.85rem;
   color: #999;
   transform: translateY(-150%);
+}
+/* ------- iphone 6+, 7+, 8+ and iPhone ---------- X */
+/*   Landscape  */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  /* shape */
+  .square {
+    width: 30vw;
+    height: 40%;
+    position: absolute;
+    top: 0;
+    left: 60vh;
+    background: rgba(155, 128, 10, 0.4);
+    z-index: -1;
+  }
+  .wrapper {
+    padding: 7% 15%;
+  }
+  .subscribe-header h1 {
+    font-size: 1.3em;
+    text-align: center;
+    margin-block-end: 0;
+  }
 }
