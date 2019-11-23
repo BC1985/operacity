@@ -17,6 +17,28 @@ class App extends Component {
     });
   };
   render() {
+    const routes = [
+      {
+        to: "/about",
+        name: "About",
+        onClick: this.openSideNav
+      },
+      {
+        to: "/program",
+        name: "Program",
+        onClick: this.openSideNav
+      },
+      {
+        to: "/gallery",
+        name: "Gallery",
+        onClick: this.openSideNav
+      },
+      {
+        to: "/tickets",
+        name: "Tickets",
+        onClick: this.openSideNav
+      }
+    ];
     return (
       <div>
         <Router>
@@ -24,12 +46,16 @@ class App extends Component {
             openSideNav={this.openSideNav}
             isSideNavOpen={this.state.isSideNavOpen}
           />
-          <Nav show={this.state.isSideNavOpen} />
-          <Route component={LandscapeNav} />
+          <Nav show={this.state.isSideNavOpen} routes={routes} />
+          <LandscapeNav routes={routes} />
           <Switch>
             <Header exact path="/" />
-            <Route path="/about" component={About} />
-            <Route path="/subscribe" component={SubscribeForm} />
+            <Route path="/about" component={About} routes={routes} />
+            <Route
+              path="/subscribe"
+              component={SubscribeForm}
+              routes={routes}
+            />
           </Switch>
         </Router>
       </div>
