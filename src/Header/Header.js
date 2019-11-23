@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./Header.css";
 function Header() {
   return (
@@ -10,10 +11,9 @@ function Header() {
           </div>
           <h1>Operacity</h1>
           <p>It isn't over 'till the fat lady sings</p>
-
-          <a href="#404" className="btn">
-            Subscribe
-          </a>
+          <NavLink to="/subscribe">
+            <button className="btn">Subscribe</button>
+          </NavLink>
         </div>
       </div>
     </div>
