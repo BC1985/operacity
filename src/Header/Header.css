@@ -1,6 +1,12 @@
 /* iPhone Portrait */
 :root {
   --btn-color: #e50914;
+  --overlay-gradient: linear-gradient(
+    180deg,
+    rgba(9, 8, 26, 0.6) 0%,
+    rgba(17, 17, 18, 0.7) 0%,
+    rgba(251, 251, 251, 0) 69%
+  );
 }
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   .header {
@@ -11,15 +17,15 @@
     background-position: center;
     background-size: cover;
   }
+  /* overlay */
   .header::after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    z-index: 1;
-    background: rgb(0, 0, 0, 0.2);
+    height: 55%;
+    background: var(--overlay-gradient);
   }
   .header-content {
     position: relative;
@@ -70,9 +76,8 @@
     cursor: pointer;
     margin-right: 0.5em;
     outline: none;
-    box-shadow: 0 1px black;
-    border-radius: 2px;
-    z-index: 2;
+    box-shadow: 1px 10px 30px 10px rgb(31, 29, 29);
+    border-radius: 5px;
     padding: 10px 20px;
   }
   .btn:hover {
@@ -121,15 +126,15 @@
     z-index: 2;
     font-family: "Volkhov", serif;
   }
+  /* overlay */
   .header::after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    z-index: 1;
-    background: rgb(0, 0, 0, 0.2);
+    height: 70%;
+    background: var(--overlay-gradient);
   }
   .btn {
     display: inline-block;
@@ -146,7 +151,6 @@
     outline: none;
     box-shadow: 0 1px black;
     border-radius: 2px;
-    z-index: 2;
     padding: 10px 20px;
   }
 }
@@ -176,9 +180,9 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    z-index: 1;
-    background: rgb(0, 0, 0, 0.2);
+    height: 40%;
+    background: rgb(2, 0, 36);
+    background: var(--overlay-gradient);
   }
   .header-content {
     position: relative;
@@ -220,7 +224,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 50%;
     z-index: 1;
     background: rgb(0, 0, 0, 0.2);
   }
@@ -239,7 +243,6 @@
     outline: none;
     box-shadow: 0 1px black;
     border-radius: 2px;
-    z-index: 2;
     padding: 10px 20px;
   }
 
@@ -256,8 +259,9 @@
     position: relative;
     background: url(../Images/opera.png);
     background-position: center;
-    background-size: contain;
+    background-size: cover;
   }
+  /* overlay */
   .header::after {
     content: "";
     position: absolute;
@@ -266,7 +270,7 @@
     width: 100%;
     height: 100%;
     z-index: 1;
-    background: rgb(0, 0, 0, 0.2);
+    background: var(--overlay-gradient);
   }
   .header-content {
     position: relative;
@@ -308,9 +312,8 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    z-index: 1;
-    background: rgb(0, 0, 0, 0.2);
+    height: 75%;
+    background: var(--overlay-gradient);
   }
   .btn {
     display: inline-block;
@@ -327,7 +330,6 @@
     outline: none;
     box-shadow: 0 1px black;
     border-radius: 2px;
-    z-index: 2;
     padding: 10px 20px;
   }
 }
