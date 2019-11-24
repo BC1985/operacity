@@ -7,6 +7,7 @@ import LandscapeNav from "../Nav/LandscapeNav";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import About from "../About/About";
 import SubscribeForm from "../SubscribeForm/SubscribeForm";
+import Calendar from "../Calendar/Calendar";
 class App extends Component {
   state = {
     isSideNavOpen: false
@@ -52,6 +53,7 @@ class App extends Component {
             <Header exact path="/" />
             <Route path="/about" component={About} routes={routes} />
             <Route path="/subscribe" component={SubscribeForm} />
+            <Route path="/calendar" component={Calendar} />
           </Switch>
         </Router>
       </div>
