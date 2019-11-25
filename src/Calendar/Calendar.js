@@ -1,6 +1,5 @@
 import React from "react";
 import "./Calendar.css";
-
 function Calendar() {
   return (
     <div className="calendar-wrapper">
@@ -45,7 +44,7 @@ function Calendar() {
             <td>20</td>
             <td>21</td>
           </tr>
-          <tr className="row-3">
+          <tr className="row-4">
             <td>22</td>
             <td>23</td>
             <td>24</td>
@@ -54,7 +53,7 @@ function Calendar() {
             <td>27</td>
             <td>28</td>
           </tr>
-          <tr className="row-4">
+          <tr className="row-5">
             <td>29</td>
             <td>30</td>
             <td>31</td>
