@@ -1,0 +1,40 @@
+.calendar-wrapper {
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.weekdays {
+  font-family: "Dancing Script", cursive;
+  font-size: large;
+}
+#calendar {
+  font-size: 2em;
+}
+#calendar td {
+  padding: 10px;
+}
+
+.row-1 {
+  font-family: "Volkhov", serif;
+}
+.row-2 {
+  font-family: "Dancing Script", cursive;
+}
+.row-3 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.row-4 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.row-5 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.month-caption {
+  margin-top: 30px;
+
+  font-family: "Dancing Script", cursive;
+  font-weight: bolder;
+  font-size: 2em;
+}
