@@ -17,7 +17,7 @@ function Date(props) {
       <div className="program-header">
         <h1>December 2019</h1>
       </div>
-      {info}
+      <div className="info-container">{info}</div>
     </div>
   );
 }
