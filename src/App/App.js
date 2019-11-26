@@ -8,6 +8,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import About from "../About/About";
 import SubscribeForm from "../SubscribeForm/SubscribeForm";
 import Program from "../Program/Program";
+import Tickets from "../Tickets/Tickets";
+import { OperaContextProvider } from "../OperaContext";
 class App extends Component {
   state = {
     isSideNavOpen: false
@@ -53,7 +55,10 @@ class App extends Component {
             <Header exact path="/" />
             <Route path="/about" component={About} routes={routes} />
             <Route path="/subscribe" component={SubscribeForm} />
-            <Route path="/program" component={Program} />
+            <OperaContextProvider>
+              <Route path="/program" component={Program} />
+              <Route path="/tickets" component={Tickets} />
+            </OperaContextProvider>
           </Switch>
         </Router>
       </div>
