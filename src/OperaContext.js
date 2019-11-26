@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 const OperaContext = React.createContext();
 
 function OperaContextProvider(props) {
