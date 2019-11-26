@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import "./Date.css";
-function Date(props) {
-  const info = props.programInfo.map((info, index) => (
+import { OperaContext } from "../OperaContext";
+
+function Date() {
+  const [selectedShow, setSelectedShow] = useState([]);
+
+  const { programInfo } = useContext(OperaContext);
+  const info = programInfo.map((info, index) => (
     <div className="info-container" key={index}>
       <p className="date">{info.date}</p>
       <div className="main-info">
@@ -9,7 +14,14 @@ function Date(props) {
         <h2 className="opera-name">{info.operaName}</h2>
         <p className="time">{info.time}</p>
         <p className="soloists">{info.soloists}</p>
-        <button className="tickets-btn">Get tickets</button>
+        <div
+          className="tickets-btn"
+          onClick={() =>
+            setSelectedShow(() => [...selectedShow, info.operaName])
+          }
+        >
+          Get tickets
+        </div>
         <hr />
       </div>
     </div>
