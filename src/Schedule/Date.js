@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import "./Date.css";
 import { OperaContext } from "../OperaContext";
+import { Redirect } from "react-router-dom";
 
 function Date() {
   const [selectedShow, setSelectedShow] = useState([]);
-
   const { programInfo } = useContext(OperaContext);
   const info = programInfo.map((info, index) => (
     <div className="info-container" key={index}>
@@ -22,10 +22,19 @@ function Date() {
         >
           Get tickets
         </div>
+        {selectedShow.length > 0 && (
+          <Redirect
+            to={{
+              pathname: "/tickets",
+              selectedShow
+            }}
+          />
+        )}
         <hr />
       </div>
     </div>
   ));
+
   return (
     <div className="date-wrapper">
       <div className="program-header">
