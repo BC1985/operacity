@@ -13,7 +13,7 @@
 .main-info {
   margin-left: 30px;
 }
-.date {
+.show-date {
   font-size: 1.2em;
   font-family: "Baskervville", serif;
 }
@@ -23,9 +23,8 @@
 
 .opera-name {
   font-family: "Baskervville", serif;
-  font-style: italic;
 }
-.time {
+.show-time {
   font-family: "Josefin Slab", serif;
 }
 .soloists {
