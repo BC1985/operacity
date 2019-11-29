@@ -1,0 +1,12 @@
+.tickets-wrapper {
+  padding: 10%;
+}
+
+.ticket-price-form {
+  display: inline;
+}
+
+.ticket-types {
+  list-style-type: none;
+  padding-inline-start: 0;
+}
