@@ -8,16 +8,22 @@ function Date() {
   const { programInfo } = useContext(OperaContext);
   const info = programInfo.map((info, index) => (
     <div className="info-container" key={index}>
-      <p className="date">{info.date}</p>
+      <p className="show-date">{info.date}</p>
       <div className="main-info">
         <h3 className="composer">{info.composer}</h3>
         <h2 className="opera-name">{info.operaName}</h2>
-        <p className="time">{info.time}</p>
+        <p className="show-time">{info.time}</p>
         <p className="soloists">{info.soloists}</p>
         <div
           className="tickets-btn"
           onClick={() =>
-            setSelectedShow(() => [...selectedShow, info.operaName])
+            setSelectedShow(() => [
+              ...selectedShow,
+              info.operaName,
+              info.composer,
+              info.date,
+              info.time
+            ])
           }
         >
           Get tickets
