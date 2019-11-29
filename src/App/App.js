@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import About from "../About/About";
 import SubscribeForm from "../SubscribeForm/SubscribeForm";
 import Program from "../Program/Program";
-import Tickets from "../Tickets/Tickets";
+import TicketsPurchaseForm from "../TicketsPurchaseForm/TicketsPurchaseForm";
 import { OperaContextProvider } from "../OperaContext";
 class App extends Component {
   state = {
@@ -57,7 +57,7 @@ class App extends Component {
             <Route path="/subscribe" component={SubscribeForm} />
             <OperaContextProvider>
               <Route path="/program" component={Program} />
-              <Route path="/tickets" component={Tickets} />
+              <Route path="/tickets" component={TicketsPurchaseForm} />
             </OperaContextProvider>
           </Switch>
         </Router>
