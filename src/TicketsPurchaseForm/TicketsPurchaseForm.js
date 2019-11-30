@@ -61,8 +61,8 @@ function Tickets(props) {
       </div>
 
       <div className="show-info">
+        <h2 className="inner_composer">{composer}'s</h2>
         <h1 className="inner_opera-name">{operaName}</h1>
-        <h2 className="inner_composer">{composer}</h2>
         <p className="inner_show-date">{showDate}</p>
         <p className="inner_show-time">{showTime}</p>
       </div>
