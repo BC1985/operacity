@@ -9,6 +9,7 @@ import About from "../About/About";
 import SubscribeForm from "../SubscribeForm/SubscribeForm";
 import Program from "../Program/Program";
 import TicketsPurchaseForm from "../TicketsPurchaseForm/TicketsPurchaseForm";
+import Singers from "../Singers/Singers";
 import { OperaContextProvider } from "../OperaContext";
 class App extends Component {
   state = {
@@ -58,6 +59,7 @@ class App extends Component {
             <OperaContextProvider>
               <Route path="/program" component={Program} />
               <Route path="/tickets" component={TicketsPurchaseForm} />
+              <Route path="/who-we-are" component={Singers} />
             </OperaContextProvider>
           </Switch>
         </Router>
