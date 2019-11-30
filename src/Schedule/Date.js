@@ -22,7 +22,8 @@ function Date() {
               info.operaName,
               info.composer,
               info.date,
-              info.time
+              info.time,
+              info.image
             ])
           }
         >
