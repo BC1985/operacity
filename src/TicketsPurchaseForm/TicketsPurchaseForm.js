@@ -6,6 +6,7 @@ function Tickets(props) {
   const composer = props.location.selectedShow[1];
   const showDate = props.location.selectedShow[2];
   const showTime = props.location.selectedShow[3];
+  const infoContainerImage = props.location.selectedShow[4];
 
   const [ticketType, setTicketType] = useState([
     {
@@ -52,18 +53,25 @@ function Tickets(props) {
 
   return (
     <div className="tickets-wrapper">
-      <h1 className="opera-name">{operaName}</h1>
-      <h2 className="composer">{composer}</h2>
-      <p className="show-date">{showDate}</p>
-      <p className="show-time">{showTime}</p>
-      <div className="form-container">
-        <form className="ticket-price-form">
-          <p>Please enter number of tickets of each type</p>
-          <NumberOfTickets ticketType={ticketType} onChange={onChange} />
-          <Total ticketType={ticketType} />
-          <button className="tickets-btn">Purchase tickets</button>
-        </form>
+      <div
+        className="cropped-image-container"
+        style={{ backgroundImage: `url(${infoContainerImage})` }}
+      >
+        <div className="image-overlay"></div>
       </div>
+
+      <div className="show-info">
+        <h1 className="inner_opera-name">{operaName}</h1>
+        <h2 className="inner_composer">{composer}</h2>
+        <p className="inner_show-date">{showDate}</p>
+        <p className="inner_show-time">{showTime}</p>
+      </div>
+      <form className="form-container">
+        <p>Please enter number of tickets of each type</p>
+        <NumberOfTickets ticketType={ticketType} onChange={onChange} />
+        <Total ticketType={ticketType} />
+        <button className="tickets-btn">Purchase tickets</button>
+      </form>
     </div>
   );
 }
