@@ -15,7 +15,7 @@
     color: var(--heading-color);
   }
 
-  img {
+  #about-img {
     border: 2px gray solid;
     width: 100%;
   }
@@ -92,7 +92,7 @@
     color: black;
     border-radius: 10px;
   }
-  img {
+  #about-img {
     border: 2px gray solid;
     width: 100%;
   }

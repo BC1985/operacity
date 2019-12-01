@@ -5,8 +5,8 @@ function About() {
   return (
     <>
       <div className="container">
-        <h1>About</h1>
-        <img src={conductor} alt="conductor" />
+        <h1>About Us</h1>
+        <img src={conductor} alt="conductor" id="about-img" />
         <p className="credit">
           Image credit-Taiwan National Symphony Orchestra website
         </p>
