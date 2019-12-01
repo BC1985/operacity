@@ -10,6 +10,7 @@ import SubscribeForm from "../SubscribeForm/SubscribeForm";
 import Program from "../Program/Program";
 import TicketsPurchaseForm from "../TicketsPurchaseForm/TicketsPurchaseForm";
 import Singers from "../Singers/Singers";
+import News from "../News/News";
 import { OperaContextProvider } from "../OperaContext";
 class App extends Component {
   state = {
@@ -30,6 +31,11 @@ class App extends Component {
       {
         to: "/program",
         name: "Program",
+        onClick: this.openSideNav
+      },
+      {
+        to: "/news",
+        name: "News",
         onClick: this.openSideNav
       },
       {
@@ -60,6 +66,7 @@ class App extends Component {
               <Route path="/program" component={Program} />
               <Route path="/tickets" component={TicketsPurchaseForm} />
               <Route path="/who-we-are" component={Singers} />
+              <Route path="/news" component={News} />
             </OperaContextProvider>
           </Switch>
         </Router>
