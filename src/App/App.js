@@ -24,7 +24,7 @@ class App extends Component {
     const routes = [
       {
         to: "/about",
-        name: "About",
+        name: "About us",
         onClick: this.openSideNav
       },
       {
@@ -38,8 +38,8 @@ class App extends Component {
         onClick: this.openSideNav
       },
       {
-        to: "/tickets",
-        name: "Tickets",
+        to: "/who-we-are",
+        name: "Who we are",
         onClick: this.openSideNav
       }
     ];
