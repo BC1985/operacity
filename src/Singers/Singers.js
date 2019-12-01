@@ -29,7 +29,7 @@ function SingersList() {
     },
     {
       name: "Jane Doe",
-      credentials: "Kevorikian School of Medicine",
+      credentials: "Kevorkian School of Medicine",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis",
       image:
