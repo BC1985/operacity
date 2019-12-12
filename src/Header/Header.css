@@ -107,11 +107,13 @@
     justify-content: center;
     align-items: center;
   }
+  .header-content h1 {
+    margin-top: 20vh;
+  }
   #logo {
     position: absolute;
     color: white;
     font-size: 3em;
-    margin-top: -40px;
   }
 
   /* overlay */
