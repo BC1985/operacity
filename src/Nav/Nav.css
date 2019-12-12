@@ -55,7 +55,6 @@
 /* Landscape */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   .nav {
-    position: relative;
     display: none;
   }
   .nav-links {
@@ -71,5 +70,12 @@
     margin-block-start: 0px;
     transform: translateX(0%);
     transition: 1s;
+  }
+}
+
+/* --- iPad --- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+  .nav {
+    display: none;
   }
 }
