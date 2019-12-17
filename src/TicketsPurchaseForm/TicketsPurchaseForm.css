@@ -41,6 +41,10 @@
   border-radius: 5px;
   padding: 10px 20px;
 }
+#place-order-btn:disabled {
+  background: gray;
+}
+
 #place-order-btn:focus {
   outline: none;
 }
@@ -48,6 +52,7 @@
 .button-div {
   display: flex;
   justify-content: center;
+  padding-bottom: 20%;
 }
 .added-to-cart {
   background-color: rgb(250, 175, 37);
@@ -64,6 +69,29 @@
   border: none;
   color: white;
   border-radius: 5px;
+}
+.added-to-cart:disabled {
+  background: gray;
+  color: white;
+}
+.remove-button:disabled {
+  background: gray;
+}
+.cart {
+  margin: 10%;
+}
+.cart h2 {
+  padding: 10px 20px 20px;
+  border: 3px solid black;
+  box-shadow: -20px 18px rgb(177, 101, 82);
+}
+
+.cart h3 {
+  background-color: lightslategrey;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  padding: 5% 10% 10%;
+  clip-path: polygon(50% 10%, 0 20%, 10% 100%, 100% 0);
 }
 
 .ticket-btn-default {
