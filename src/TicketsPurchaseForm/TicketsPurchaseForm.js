@@ -32,6 +32,9 @@ function Tickets(props) {
     }, 2000);
     setAddButtonClick(false);
   };
+
+  const disabledButton = count === 0 ? true : false;
+
   const NumberOfTickets = ({ ticketType }) => (
     <div className="ticket-container">
       <h1>Get your ticket today!</h1>
@@ -42,11 +45,16 @@ function Tickets(props) {
             <button
               onClick={addClickHandler}
               className={count > 0 ? "added-to-cart " : "ticket-btn-default"}
+              disabled={isLoading}
             >
               {count > 0 ? "Added!" : "Add to cart"}
             </button>
             {count > 0 && (
-              <button className="remove-button" onClick={removeClickHandler}>
+              <button
+                className="remove-button"
+                onClick={removeClickHandler}
+                disabled={isLoading}
+              >
                 Remove
               </button>
             )}
@@ -55,7 +63,6 @@ function Tickets(props) {
       ))}
     </div>
   );
-
   const checkout = () => {
     setCount(0);
     setAddButtonClick(false);
@@ -71,7 +78,7 @@ function Tickets(props) {
       <div className="tooltip-remove">Removed from cart</div>
     </div>
   );
-  function CartItem() {
+  const CartItem = () => {
     return (
       <div className="cart">
         <h2>Checkout</h2>
@@ -79,8 +86,7 @@ function Tickets(props) {
         <p>Total: ${count * 30}</p>
       </div>
     );
-  }
-
+  };
   const placeOrder = () => {
     setButtonText("Placing order...");
     setIsLoading(true);
@@ -109,7 +115,11 @@ function Tickets(props) {
         <NumberOfTickets ticketType={ticketType} />
         <CartItem />
         <div className="button-div">
-          <button id="place-order-btn" onClick={placeOrder}>
+          <button
+            id="place-order-btn"
+            onClick={placeOrder}
+            disabled={disabledButton}
+          >
             {buttonText}
           </button>
           {isLoading && <Spinner />}
