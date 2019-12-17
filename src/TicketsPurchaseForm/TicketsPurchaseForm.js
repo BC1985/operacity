@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./TicketsPurchaseForm.css";
-
+import Spinner from "../Spinner/Spinner";
 function Tickets(props) {
   const operaName = props.location.selectedShow[0];
   const composer = props.location.selectedShow[1];
@@ -12,17 +12,23 @@ function Tickets(props) {
   const [count, setCount] = useState(0);
   const [addButtonClick, setAddButtonClick] = useState(false);
   const [removeButtonClick, setRemoveButtonClick] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [buttonText, setButtonText] = useState("Place order");
 
   const addClickHandler = () => {
     setCount(count + 1);
     setAddButtonClick(true);
-    setRemoveButtonClick(false);
+    setTimeout(() => {
+      setAddButtonClick(false);
+    }, 2000);
   };
 
   const removeClickHandler = () => {
     setCount(count - 1);
     setRemoveButtonClick(true);
-    setAddButtonClick(false);
+    setTimeout(() => {
+      setRemoveButtonClick(false);
+    }, 2000);
   };
   const NumberOfTickets = ({ ticketType }) => (
     <div className="ticket-container">
@@ -48,6 +54,11 @@ function Tickets(props) {
     </div>
   );
 
+  const checkout = () => {
+    setCount(0);
+    setAddButtonClick(false);
+    setRemoveButtonClick(false);
+  };
   const TooltipAdd = () => (
     <div className="animation-box">
       <div className="tooltip-add">Added to cart</div>
@@ -68,6 +79,15 @@ function Tickets(props) {
     );
   }
 
+  const placeOrder = () => {
+    setButtonText("Placing order...");
+    setIsLoading(true);
+    setTimeout(() => {
+      checkout();
+      setIsLoading(false);
+      setButtonText("Place order");
+    }, 3000);
+  };
   return (
     <div className="tickets-wrapper">
       <div
@@ -86,7 +106,10 @@ function Tickets(props) {
       <div>
         <NumberOfTickets ticketType={ticketType} />
         <CartItem />
-        <button className="tickets-btn">Purchase tickets</button>
+        <button id="place-order-btn" onClick={placeOrder}>
+          {buttonText}
+          {isLoading && <Spinner />}
+        </button>
       </div>
       {addButtonClick === true && <TooltipAdd />}
       {removeButtonClick === true && <TooltipRemove />}
