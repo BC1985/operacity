@@ -21,6 +21,7 @@ function Tickets(props) {
     setTimeout(() => {
       setAddButtonClick(false);
     }, 2000);
+    setRemoveButtonClick(false);
   };
 
   const removeClickHandler = () => {
@@ -29,6 +30,7 @@ function Tickets(props) {
     setTimeout(() => {
       setRemoveButtonClick(false);
     }, 2000);
+    setAddButtonClick(false);
   };
   const NumberOfTickets = ({ ticketType }) => (
     <div className="ticket-container">
@@ -106,10 +108,12 @@ function Tickets(props) {
       <div>
         <NumberOfTickets ticketType={ticketType} />
         <CartItem />
-        <button id="place-order-btn" onClick={placeOrder}>
-          {buttonText}
+        <div className="button-div">
+          <button id="place-order-btn" onClick={placeOrder}>
+            {buttonText}
+          </button>
           {isLoading && <Spinner />}
-        </button>
+        </div>
       </div>
       {addButtonClick === true && <TooltipAdd />}
       {removeButtonClick === true && <TooltipRemove />}
