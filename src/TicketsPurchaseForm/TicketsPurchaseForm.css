@@ -1,9 +1,11 @@
 .tickets-wrapper {
   padding: 10%;
+  font-family: "Volkhov", serif;
 }
 
 :root {
   --font-color: whiteSmoke;
+  --box-shadow: 5px 1px 10px 5px rgb(48, 46, 46);
 }
 .tickets-wrapper input {
   background-color: lightgray;
@@ -11,14 +13,47 @@
   width: 30px;
 }
 
-.form-container {
-  display: inline;
+.ticket-container {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.ticket-container h1 {
+  font-size: 1.5em;
+  margin-bottom: 10%;
 }
 
-.ticket-types {
+.tickets-quantity {
+  display: flex;
+  flex-direction: column;
   list-style-type: none;
   padding-inline-start: 0;
 }
+
+.added-to-cart {
+  background-color: rgb(250, 175, 37);
+  color: firebrick;
+  margin-left: 5%;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+}
+.remove-button {
+  background: #000;
+  margin-left: 5%;
+  padding: 5px 10px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
+.ticket-btn-default {
+  border-radius: 3px;
+  margin-left: 5%;
+  padding: 5px 10px;
+  border: none;
+  background: lightGray;
+}
+
 .image-overlay {
   width: 100%;
   height: 100%;
@@ -61,4 +96,77 @@
   background: #e50914d3;
   transform-origin: bottom left;
   transform: skewY(-80deg);
+}
+
+.animation-box {
+  margin: 0 auto;
+}
+.tooltip-add {
+  animation-name: topFadeOut;
+  font-family: "Volkhov", serif;
+  animation-duration: 2.3s;
+  opacity: 0;
+  background: darkslategray;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  box-shadow: var(--box-shadow);
+}
+.tooltip-remove {
+  animation-name: bottomFadeOut;
+  font-family: "Volkhov", serif;
+  animation-duration: 2s;
+  opacity: 0;
+  background: darkred;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  box-shadow: var(--box-shadow);
+}
+
+@keyframes topFadeOut {
+  0% {
+    position: absolute;
+    top: 50%;
+    opacity: 0;
+  }
+
+  60% {
+    top: 20%;
+    opacity: 1;
+  }
+
+  75% {
+    position: absolute;
+    top: 25%;
+    opacity: 1;
+  }
+
+  85% {
+    opacity: 0;
+    top: 5%;
+  }
+}
+
+@keyframes bottomFadeOut {
+  0% {
+    position: absolute;
+    top: 10%;
+    opacity: 0;
+  }
+  60% {
+    top: 30%;
+    opacity: 1;
+  }
+
+  75% {
+    position: absolute;
+    top: 30%;
+    opacity: 1;
+  }
+
+  85% {
+    top: 50%;
+    opacity: 0;
+  }
 }
