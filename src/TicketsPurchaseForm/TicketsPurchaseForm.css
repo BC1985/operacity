@@ -28,7 +28,27 @@
   list-style-type: none;
   padding-inline-start: 0;
 }
+#place-order-btn {
+  position: relative;
+  background: var(--btn-color);
+  color: whitesmoke;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+#place-order-btn:focus {
+  outline: none;
+}
 
+.button-div {
+  display: flex;
+  justify-content: center;
+}
 .added-to-cart {
   background-color: rgb(250, 175, 37);
   color: firebrick;
