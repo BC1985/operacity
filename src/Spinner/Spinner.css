@@ -2,7 +2,7 @@
   content: "";
   box-sizing: border-box;
   position: absolute;
-  bottom: 5%;
+  bottom: -5%;
   left: 40%;
   height: 60px;
   width: 60px;
