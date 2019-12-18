@@ -1,10 +1,27 @@
+/* Global settings */
+
 .news-wrapper {
-  padding: 10%;
   font-family: "Baskervville", serif;
+  padding: 10%;
 }
+
 .news-wrapper h1 {
   font-family: "Volkhov", serif;
 }
+#news-img {
+  margin-top: 5%;
+  border: 4px solid black;
+  width: 100%;
+  box-shadow: 30px -25px teal;
+}
+.img-description {
+  font-style: italic;
+  font-size: 0.8em;
+  margin-block-start: 3px;
+  margin-block-end: 0;
+}
+
+/* Shapes */
 .news-wrapper::after {
   content: "";
   width: 100vw;
@@ -17,43 +34,108 @@
   z-index: -1;
   transform: skewY(30deg);
 }
-
 .item-container:nth-child(2)::after {
   content: "";
   width: 100vw;
-  height: 100%;
+  height: 150%;
   position: absolute;
   top: 1;
   left: 0;
   background: rgba(140, 150, 10, 0.3);
   transform-origin: bottom right;
   z-index: -1;
-  transform: skewY(-30deg);
+  transform: skewY(-20deg);
+}
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .news-wrapper {
+    padding: 10%;
+    font-family: "Baskervville", serif;
+  }
+
+  .content {
+    margin-bottom: 50px;
+    line-height: 1.5em;
+  }
+  .inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 2px solid black;
+    top: -10px;
+    left: -10px;
+    z-index: 10;
+  }
+}
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  /* Shapes */
+  .item-container:nth-child(2)::after {
+    height: 150%;
+  }
+  .img-description {
+    font-size: 1em;
+  }
+  .item-container p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
 }
 
-.img-description {
-  font-style: italic;
-  font-size: 0.8em;
-  margin-block-start: 3px;
-  margin-block-end: 0;
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
 }
 
-#news-img {
-  border: 4px solid black;
-  max-width: 100%;
-  box-shadow: 30px -16px teal;
+/* Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  /* Shapes */
+  .news-wrapper::after {
+    content: "";
+    width: 100vw;
+    height: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(161, 16, 16, 0.432);
+    transform-origin: top right;
+    z-index: -1;
+    transform: skewY(30deg);
+  }
+  .item-container:nth-child(2)::after {
+    content: "";
+    width: 100vw;
+    height: 150%;
+    position: absolute;
+    top: 1;
+    left: 0;
+    background: rgba(140, 150, 10, 0.3);
+    transform-origin: bottom right;
+    z-index: -1;
+    transform: skewY(-20deg);
+  }
+  .img-description {
+    font-size: 1em;
+  }
+  .item-container p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
 }
 
-.content {
-  margin-bottom: 50px;
-  line-height: 1.5em;
+/* ----------- iPhone X ----------- */
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
 }
-.inner {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  border: 2px solid black;
-  top: -10px;
-  left: -10px;
-  z-index: 10;
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  .img-description {
+    font-size: 1em;
+  }
+  .item-container p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
 }
