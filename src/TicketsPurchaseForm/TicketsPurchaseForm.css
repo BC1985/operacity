@@ -52,7 +52,7 @@
 .button-div {
   display: flex;
   justify-content: center;
-  padding-bottom: 20%;
+  padding-bottom: 30%;
 }
 .added-to-cart {
   background-color: rgb(250, 175, 37);
@@ -81,7 +81,7 @@
   margin: 10%;
 }
 .cart h2 {
-  padding: 10px 20px 20px;
+  padding: 10px 20px;
   border: 3px solid black;
   box-shadow: -20px 18px rgb(177, 101, 82);
 }
