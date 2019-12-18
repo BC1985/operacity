@@ -8,7 +8,7 @@ function Nav(props) {
     sideNavClass = "nav-links open";
   }
   return (
-    <nav className="nav">
+    <nav>
       <ul className={sideNavClass}>
         {props.routes.map(route => (
           <li key={route.name}>
