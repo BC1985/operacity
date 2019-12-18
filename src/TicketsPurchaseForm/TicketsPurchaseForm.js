@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import "./TicketsPurchaseForm.css";
 import Spinner from "../Spinner/Spinner";
 function Tickets(props) {
-  const operaName = props.location.selectedShow[0];
-  const composer = props.location.selectedShow[1];
-  const showDate = props.location.selectedShow[2];
-  const showTime = props.location.selectedShow[3];
-  const infoContainerImage = props.location.selectedShow[4];
+  // const operaName = props.location.selectedShow[0];
+  // const composer = props.location.selectedShow[1];
+  // const showDate = props.location.selectedShow[2];
+  // const showTime = props.location.selectedShow[3];
+  // const infoContainerImage = props.location.selectedShow[4];
 
   const ticketType = [{ type: "Regular", count: 0, price: 30 }];
   const [count, setCount] = useState(0);
@@ -100,16 +100,16 @@ function Tickets(props) {
     <div className="tickets-wrapper">
       <div
         className="cropped-image-container"
-        style={{ backgroundImage: `url(${infoContainerImage})` }}
+        // style={{ backgroundImage: `url(${infoContainerImage})` }}
       >
         <div className="image-overlay"></div>
       </div>
 
       <div className="show-info">
-        <h2 className="inner_composer">{composer}</h2>
-        <h1 className="inner_opera-name">{operaName}</h1>
-        <p className="inner_show-date">{showDate}</p>
-        <p className="inner_show-time">{showTime}</p>
+        <h2 className="inner_composer">fidelop</h2>
+        <h1 className="inner_opera-name">asf</h1>
+        <p className="inner_show-date">sf</p>
+        <p className="inner_show-time">asf</p>
       </div>
       <div>
         <NumberOfTickets ticketType={ticketType} />
@@ -118,7 +118,7 @@ function Tickets(props) {
           <button
             id="place-order-btn"
             onClick={placeOrder}
-            disabled={disabledButton}
+            disabled={disabledButton ? true : isLoading}
           >
             {buttonText}
           </button>
