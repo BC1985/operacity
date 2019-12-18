@@ -5,17 +5,15 @@
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-  .nav {
+  .nav-links {
     position: fixed;
     z-index: 3;
-  }
-  .nav-links {
-    transform: translateX(-100%);
+    transform: translateX(-105%);
     transition: 1s 0.5s;
-    background: #000;
+    background: rgb(44, 42, 42);
     color: whitesmoke;
     display: flex;
-    width: 100%;
+    width: 60%;
     flex-direction: column;
     height: 100vh;
     justify-content: center;
@@ -54,9 +52,6 @@
 }
 /* Landscape */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-  .nav {
-    display: none;
-  }
   .nav-links {
     position: absolute;
     background: transparent;
@@ -75,7 +70,4 @@
 
 /* --- iPad --- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
-  .nav {
-    display: none;
-  }
 }
