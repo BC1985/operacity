@@ -45,7 +45,7 @@ class App extends Component {
       },
       {
         to: "/who-we-are",
-        name: "Who we are",
+        name: "Performers",
         onClick: this.openSideNav
       }
     ];
