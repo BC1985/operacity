@@ -1,8 +1,7 @@
 #hamburger-icon {
   position: fixed;
-  padding: 20px;
+  padding: 15px;
   z-index: 4;
-  background: rgb(20, 20, 20, 0.2);
 }
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   #hamburger-icon {

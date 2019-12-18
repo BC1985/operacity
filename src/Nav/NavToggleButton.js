@@ -7,14 +7,13 @@ class NavToggleButton extends Component {
     const styles = {
       hamburgerIcon: {
         position: "absolute",
-        padding: "20px",
         zIndex: 2,
         cursor: "pointer"
       },
       line: {
         height: "3px",
         width: "20px",
-        background: "white",
+        background: "gray",
         transition: "all 0.3s ease"
       },
       lineTop: {
