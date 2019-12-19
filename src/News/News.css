@@ -1,12 +1,11 @@
 /* Global settings */
 
 .news-wrapper {
-  font-family: "Baskervville", serif;
   padding: 10%;
 }
 
 .news-wrapper h1 {
-  font-family: "Volkhov", serif;
+  font-family: "Baskervville", serif;
 }
 #news-img {
   margin-top: 5%;
@@ -34,18 +33,6 @@
   z-index: -1;
   transform: skewY(30deg);
 }
-.item-container:nth-child(2)::after {
-  content: "";
-  width: 100vw;
-  height: 150%;
-  position: absolute;
-  top: 1;
-  left: 0;
-  background: rgba(140, 150, 10, 0.3);
-  transform-origin: bottom right;
-  z-index: -1;
-  transform: skewY(-20deg);
-}
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   .news-wrapper {
     padding: 10%;
@@ -64,6 +51,18 @@
     top: -10px;
     left: -10px;
     z-index: 10;
+  }
+  .item-container:nth-child(2)::after {
+    content: "";
+    width: 100vw;
+    height: 150%;
+    position: absolute;
+    top: 1;
+    left: 0;
+    background: rgba(140, 150, 10, 0.3);
+    transform-origin: bottom right;
+    z-index: -1;
+    transform: skewY(-20deg);
   }
 }
 /* Landscape */
@@ -137,5 +136,119 @@
   .item-container p {
     font-size: 1.2em;
     line-height: 1.5em;
+  }
+}
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+  .content {
+    margin-bottom: 10%;
+    line-height: 2em;
+  }
+  .img-description {
+    font-size: 1em;
+  }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .content {
+    font-size: 1.2em;
+    margin-bottom: 5%;
+  }
+}
+
+/* ----------- iPad Pro 10.5" ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 834px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen and (min-device-width: 834px) and (max-device-width: 834px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen and (min-device-width: 1112px) and (max-device-width: 1112px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+}
+/* ----------- Non-Retina Screens ----------- */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .content {
+    font-size: 1.2em;
+    margin-bottom: 5%;
+  }
+}
+@media screen and (min-device-width: 1600px) {
+  #news-img {
+    border: 2px solid black;
+    box-shadow: 10px -10px teal;
+  }
+  .news-wrapper {
+    display: flex;
+    padding: 10%;
+  }
+  .main-stories {
+    margin-top: 10%;
+    padding: 0 5% 10% 10%;
+    width: 70%;
+  }
+  .blurb {
+    color: gray;
+    font-family: "Baskervville", serif;
+  }
+  .side {
+    width: 30%;
+    font-size: 0.5em;
+    font-family: "Baskervville", serif;
+  }
+  .news-title {
+    font-size: 1.3em;
+  }
+
+  .content,
+  .img-description,
+  .side-blurb,
+  .side-img-description,
+  .side-content {
+    display: none;
+  }
+  .item-container:nth-child(1)::after {
+    content: "";
+    width: 100vw;
+    height: 50%;
+    position: absolute;
+    top: 1;
+    left: 0;
+    background: rgba(140, 150, 10, 0.3);
+    transform-origin: top;
+    z-index: -1;
+    transform: skewY(-20deg);
   }
 }
