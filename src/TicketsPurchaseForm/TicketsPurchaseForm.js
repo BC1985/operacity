@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import "./TicketsPurchaseForm.css";
 import Spinner from "../Spinner/Spinner";
+import { Link } from "react-router-dom";
 function Tickets(props) {
-  // const operaName = props.location.selectedShow[0];
-  // const composer = props.location.selectedShow[1];
-  // const showDate = props.location.selectedShow[2];
-  // const showTime = props.location.selectedShow[3];
-  // const infoContainerImage = props.location.selectedShow[4];
+  const operaName = props.location.selectedShow[0];
+  const composer = props.location.selectedShow[1];
+  const showDate = props.location.selectedShow[2];
+  const showTime = props.location.selectedShow[3];
+  const infoContainerImage = props.location.selectedShow[4];
 
   const ticketType = [{ type: "Regular", count: 0, price: 30 }];
   const [count, setCount] = useState(0);
@@ -14,7 +15,7 @@ function Tickets(props) {
   const [removeButtonClick, setRemoveButtonClick] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [buttonText, setButtonText] = useState("Place order");
-
+  const [boughtTickets, setBoughtTickets] = useState(false);
   const addClickHandler = () => {
     setCount(count + 1);
     setAddButtonClick(true);
@@ -67,12 +68,27 @@ function Tickets(props) {
     setCount(0);
     setAddButtonClick(false);
     setRemoveButtonClick(false);
+    setBoughtTickets(true);
   };
   const TooltipAdd = () => (
     <div className="animation-box">
       <div className="tooltip-add">Added to cart</div>
     </div>
   );
+
+  const ThankYou = () => {
+    return (
+      <div className="thank-you-wrapper">
+        <i className="fas fa-theater-masks" id="thank-you-logo"></i>
+
+        <h1>Thank you!</h1>
+
+        <p>
+          <Link to="/program">Click here to return to the program</Link>
+        </p>
+      </div>
+    );
+  };
   const TooltipRemove = () => (
     <div className="animation-box">
       <div className="tooltip-remove">Removed from cart</div>
@@ -84,6 +100,16 @@ function Tickets(props) {
         <h2>Checkout</h2>
         <h3>Quantity: {count}</h3>
         <p>Total: ${count * 30}</p>
+        <div className="button-div">
+          <button
+            id="place-order-btn"
+            onClick={placeOrder}
+            disabled={disabledButton ? true : isLoading}
+          >
+            {buttonText}
+          </button>
+          {isLoading && <Spinner />}
+        </div>
       </div>
     );
   };
@@ -100,30 +126,26 @@ function Tickets(props) {
     <div className="tickets-wrapper">
       <div
         className="cropped-image-container"
-        // style={{ backgroundImage: `url(${infoContainerImage})` }}
+        style={{ backgroundImage: `url(${infoContainerImage})` }}
       >
         <div className="image-overlay"></div>
       </div>
 
       <div className="show-info">
-        <h2 className="inner_composer">fidelop</h2>
-        <h1 className="inner_opera-name">asf</h1>
-        <p className="inner_show-date">sf</p>
-        <p className="inner_show-time">asf</p>
+        <h2 className="inner_composer">{composer}p</h2>
+        <h1 className="inner_opera-name">{operaName}</h1>
+        <p className="inner_show-date">{showDate}</p>
+        <p className="inner_show-time">{showTime}</p>
       </div>
       <div>
-        <NumberOfTickets ticketType={ticketType} />
-        <CartItem />
-        <div className="button-div">
-          <button
-            id="place-order-btn"
-            onClick={placeOrder}
-            disabled={disabledButton ? true : isLoading}
-          >
-            {buttonText}
-          </button>
-          {isLoading && <Spinner />}
-        </div>
+        {!boughtTickets ? (
+          <>
+            <NumberOfTickets ticketType={ticketType} />
+            <CartItem />
+          </>
+        ) : (
+          <ThankYou />
+        )}
       </div>
       {addButtonClick === true && <TooltipAdd />}
       {removeButtonClick === true && <TooltipRemove />}
