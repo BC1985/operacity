@@ -171,6 +171,29 @@
   padding: 10px 20px;
   box-shadow: var(--box-shadow);
 }
+.thank-you-wrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20% 5%;
+}
+.thank-you-wrapper h1 {
+  font-family: "Volkhov", serif;
+  font-size: 3em;
+  margin-block-start: 0;
+}
+.thank-you-wrapper p {
+  font-size: 1.1em;
+}
+.thank-you-wrapper a,
+.thank-you-wrapper a:visited {
+  color: maroon;
+}
+
+#thank-you-logo {
+  font-size: 3em;
+  text-align: center;
+}
 
 @keyframes topFadeOut {
   0% {
