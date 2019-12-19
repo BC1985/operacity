@@ -70,3 +70,10 @@
     display: none;
   }
 }
+
+@media screen and (min-device-width: 1600px) {
+  .landscape-nav-links {
+    font-size: 0.5em;
+    height: 30px;
+  }
+}
