@@ -4,8 +4,10 @@
   padding: 10%;
 }
 
-.news-wrapper h1 {
+.news-wrapper a {
   font-family: "Baskervville", serif;
+  color: rgb(41, 40, 40);
+  text-decoration: none;
 }
 #news-img {
   margin-top: 5%;
