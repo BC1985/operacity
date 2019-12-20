@@ -1,6 +1,9 @@
 :root {
   --heading-color: #423a3a;
 }
+.container {
+  padding: 5% 10%;
+}
 .credit {
   font-style: italic;
   margin-block-start: 3px;
@@ -11,23 +14,7 @@
   max-width: 100%;
   box-shadow: 30px -15px teal;
 }
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-  .container {
-    padding: 20% 10%;
-  }
-  .container h1,
-  .container h2 {
-    color: var(--heading-color);
-  }
-
-  .text {
-    line-height: 1.3em;
-    font-size: 1.2em;
-    color: black;
-    border-radius: 10px;
-  }
-}
-/* shapes  */
+/* Shapes */
 .container::before {
   content: "";
   width: 100vw;
@@ -38,7 +25,7 @@
   background: rgb(240, 68, 6, 0.3);
   transform-origin: top left;
   z-index: -1;
-  transform: skewY(70deg);
+  transform: skewY(40deg);
 }
 .text::before {
   content: "";
@@ -53,30 +40,34 @@
   z-index: -1;
 }
 
+.container h1,
+.container h2 {
+  color: var(--heading-color);
+}
+.text {
+  line-height: 1.3em;
+  font-size: 1.2em;
+  color: black;
+}
+
+/* iPhone 6,7,8  */
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .container {
+    padding: 15% 10%;
+  }
+  .container::before {
+    height: 100px;
+    transform: skewY(70deg);
+  }
+}
+/* Landscape */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   .container {
     padding: 15% 10%;
   }
-  .container h1,
-  h2 {
-    color: var(--heading-color);
-  }
-  .text {
-    line-height: 1.3em;
-    font-size: 1.2em;
-    color: black;
-    border-radius: 10px;
-  }
+
   .container::before {
-    content: "";
-    width: 100vw;
-    height: 200px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: rgb(240, 68, 6, 0.3);
-    transform-origin: top left;
-    z-index: -1;
     transform: skewY(45deg);
   }
 }
@@ -85,13 +76,7 @@
 /* Landscape */
 @media only screen and (min-device-width: 414px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
   .container {
-    padding: 10%;
-  }
-  .text {
-    line-height: 1.3em;
-    font-size: 1.2em;
-    color: black;
-    border-radius: 10px;
+    padding: 10% 20%;
   }
 
   /* shapes */
@@ -146,7 +131,6 @@
   }
   .text {
     font-size: 1.1em;
-    line-height: 1.5em;
   }
 }
 
@@ -154,17 +138,19 @@
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
   /* shapes */
   .container::before {
-    transform-origin: top right;
-    transform: skewY(-50deg);
+    transform: skewY(50deg);
   }
 }
 
 /* Landscape */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .container {
+    padding: 15% 10%;
+  }
   /* shapes */
   .container::before {
-    transform-origin: top right;
-    transform: skewY(-40deg);
+    transform-origin: top left;
+    transform: skewY(40deg);
   }
 }
 
@@ -202,4 +188,32 @@
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
 @media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .container {
+    padding: 5% 10%;
+    width: 70%;
+  }
+}
+@media only screen and (min-device-width: 1600px) {
+  .container {
+    padding: 5% 10%;
+    width: 70%;
+  }
+  .text {
+    font-size: 0.7em;
+    line-height: 1.5em;
+  }
+
+  .credit {
+    font-size: 0.6em;
+  }
+  .container::before {
+    height: 30px;
+    transform: skewY(40deg);
+  }
+  .text::before {
+    height: 20%;
+    transform-origin: top left;
+    transform: skewY(20deg);
+    z-index: -1;
+  }
 }
