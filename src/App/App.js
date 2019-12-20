@@ -12,6 +12,7 @@ import TicketsPurchaseForm from "../TicketsPurchaseForm/TicketsPurchaseForm";
 import Singers from "../Singers/Singers";
 import News from "../News/News";
 import { OperaContextProvider } from "../OperaContext";
+import NewsItem from "../News/NewsItem";
 class App extends Component {
   state = {
     isSideNavOpen: false
@@ -66,7 +67,8 @@ class App extends Component {
               <Route path="/program" component={Program} />
               <Route path="/tickets" component={TicketsPurchaseForm} />
               <Route path="/who-we-are" component={Singers} />
-              <Route path="/news" component={News} />
+              <Route exact path="/news" component={News} />
+              <Route path="/news/:newsItemId" component={NewsItem} />
             </OperaContextProvider>
           </Switch>
         </Router>
