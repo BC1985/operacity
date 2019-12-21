@@ -32,10 +32,8 @@
   position: relative;
   background: var(--btn-color);
   color: whitesmoke;
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: bold;
-  text-align: center;
-  text-decoration: none;
   border: none;
   cursor: pointer;
   border-radius: 5px;
@@ -51,8 +49,8 @@
 
 .button-div {
   display: flex;
-  justify-content: center;
-  padding-bottom: 30%;
+  justify-content: space-evenly;
+  padding: 0;
 }
 .added-to-cart {
   background-color: rgb(250, 175, 37);
@@ -120,10 +118,12 @@
 }
 .show-info {
   color: var(--font-color);
+  margin-bottom: 20%;
 }
 
 .inner_opera-name {
   font-family: "Baskervville", serif;
+  font-size: 1.5em;
 }
 .inner_composer {
   font-family: "Dancing Script", cursive;
@@ -239,5 +239,75 @@
   85% {
     top: 50%;
     opacity: 0;
+  }
+}
+@media screen and (min-device-width: 1600px) {
+  .tickets-wrapper {
+    padding: 5% 10%;
+    height: 100vh;
+  }
+  .show-info {
+    margin-bottom: 5%;
+  }
+  .ticket-container {
+    font-size: 0.7em;
+    text-align: center;
+  }
+  .ticket-container h1 {
+    margin-bottom: 0;
+  }
+  .cart,
+  .show-info {
+    font-size: 0.5em;
+  }
+  .cart {
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+  }
+  .cart h2 {
+    font-size: 1.2em;
+    padding: 5px 10px;
+    text-align: center;
+    box-shadow: -20px 10px rgb(177, 101, 82);
+  }
+  .cart h3 {
+    margin: 20px 0;
+    height: 60px;
+  }
+  .cart p {
+    font-size: 1.5em;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+  .added-to-cart,
+  .remove-button {
+    margin-left: 10px;
+  }
+  .button-div {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+  }
+  #place-order-btn {
+    font-size: 1em;
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 30%;
+  }
+
+  .tooltip-add,
+  .tooltip-remove {
+    font-size: 0.5em;
+  }
+  .thank-you-wrapper {
+    padding: 10%;
+  }
+  .thank-you-wrapper p {
+    font-size: 0.8em;
+  }
+  .cropped-image-container {
+    background-position: right;
+    margin-bottom: 5%;
   }
 }
