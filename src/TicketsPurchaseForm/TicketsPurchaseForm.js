@@ -99,8 +99,8 @@ function Tickets(props) {
       <div className="cart">
         <h2>Checkout</h2>
         <h3>Quantity: {count}</h3>
-        <p>Total: ${count * 30}</p>
         <div className="button-div">
+          <p>Total: ${count * 30}</p>
           <button
             id="place-order-btn"
             onClick={placeOrder}
@@ -108,8 +108,8 @@ function Tickets(props) {
           >
             {buttonText}
           </button>
-          {isLoading && <Spinner />}
         </div>
+        {isLoading && <Spinner />}
       </div>
     );
   };
