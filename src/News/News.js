@@ -20,9 +20,8 @@ const items = mainItems.map(item => (
 const sideStories = sideItems.map(item => (
   <div className="side-item-container" key={item.id}>
     <Link to={`/news/${item.id}`}>
-      <img src={item.img} alt={item.heading} id="news-img" />
-
       <h2>{item.heading}</h2>
+      <img src={item.img} alt={item.heading} id="news-img" />
       <p className="side-blurb">{item.blurb}</p>
       <p className="side-img-description">{item.description}</p>
       <p className="side-content">{item.content}</p>
