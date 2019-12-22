@@ -20,6 +20,10 @@
 .landscape-nav-links a {
   color: whitesmoke;
   text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
 }
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   .landscape-nav-links {
@@ -75,5 +79,11 @@
   .landscape-nav-links {
     font-size: 0.5em;
     height: 30px;
+  }
+  .landscape-nav-links a {
+    transition: color 0.3s;
+  }
+  .landscape-nav-links a:hover {
+    color: gray;
   }
 }
