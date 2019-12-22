@@ -9,7 +9,7 @@
   width: 100%;
 }
 .news-item-description {
-  color: gray;
+  color: rgb(54, 52, 52);
   font-style: italic;
   margin-block-start: 0;
 }
@@ -22,7 +22,7 @@
   z-index: -1;
 }
 .news-item-content {
-  color: gray;
+  color: rgb(54, 52, 52);
 }
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 
