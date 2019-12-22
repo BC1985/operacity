@@ -215,8 +215,8 @@
 /* ----------- Retina Screens ----------- */
 @media screen and (min-device-width: 1600px) {
   .date-wrapper {
-    font-size: 0.5em;
-    padding: 10% 20%;
+    font-size: 0.4em;
+    padding: 10%;
   }
   .program-header,
   .info-container {
@@ -231,5 +231,9 @@
   }
   .program-shape {
     height: 200px;
+  }
+  .tickets-btn {
+    font-size: 1em;
+    padding: 5px 10px;
   }
 }
