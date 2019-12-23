@@ -43,11 +43,14 @@ function Date() {
   ));
 
   return (
-    <div className="date-wrapper">
+    <div className="program-wrapper">
       <div className="program-header">
         <h1>December 2019</h1>
       </div>
-      {info}
+      <div className="program-title">
+        <h1>Program</h1>
+      </div>
+      <div className="schedule-container">{info}</div>
       <div className="program-shape"></div>
     </div>
   );
