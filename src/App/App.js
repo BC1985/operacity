@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import About from "../About/About";
 import SubscribeForm from "../SubscribeForm/SubscribeForm";
 import Gallery from "../Gallery/Gallery";
+import Image from "../Image/Image";
 class App extends Component {
   state = {
     isSideNavOpen: false
@@ -31,7 +32,8 @@ class App extends Component {
             <Header exact path="/" />
             <Route path="/about" component={About} />
             <Route path="/subscribe" component={SubscribeForm} />
-            <Route path="/gallery" component={Gallery} />
+            <Route exact path="/gallery" component={Gallery} />
+            <Route path="/gallery/:image" component={Image} />
           </Switch>
         </Router>
       </div>
