@@ -42,16 +42,19 @@
   z-index: -1;
   transform: skewY(30deg);
 }
+.news-title {
+  font-family: "Fjalla One", sans-serif;
+}
 .news-title::after {
   content: "";
   position: absolute;
   background-color: teal;
   border-radius: 50%;
 }
+
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   .news-wrapper {
     padding: 10%;
-    font-family: "Baskervville", serif;
   }
 
   .content {

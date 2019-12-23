@@ -5,7 +5,7 @@
   width: 60%;
 }
 .heading {
-  font-family: "Volkhov", serif;
+  font-family: "Fjalla One", sans-serif;
   text-align: center;
 }
 
@@ -18,7 +18,7 @@
   line-height: 1.5em;
 }
 .card-container {
-  font-family: "Volkhov", serif;
+  font-family: "Fjalla One", sans-serif;
   display: flex;
   align-items: center;
   flex-direction: column;

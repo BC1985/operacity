@@ -30,7 +30,7 @@
   margin: 20px 50px;
   color: white;
   z-index: 2;
-  font-family: "Volkhov", serif;
+  font-family: "Fjalla One", sans-serif;
 }
 .btn {
   background: var(--btn-color);

@@ -1,6 +1,6 @@
 .tickets-wrapper {
   padding: 10%;
-  font-family: "Volkhov", serif;
+  font-family: "Fjalla One", sans-serif;
 }
 
 :root {
@@ -130,7 +130,7 @@
 }
 .inner_show-date,
 .inner_show-time {
-  font-family: "Volkhov", serif;
+  font-family: "Fjalla One", sans-serif;
   margin-block-end: 0;
   margin-block-start: 0;
 }
@@ -151,7 +151,7 @@
 }
 .tooltip-add {
   animation-name: topFadeOut;
-  font-family: "Volkhov", serif;
+  font-family: "Fjalla One", sans-serif;
   animation-duration: 2.3s;
   opacity: 0;
   background: darkslategray;
@@ -162,7 +162,7 @@
 }
 .tooltip-remove {
   animation-name: bottomFadeOut;
-  font-family: "Volkhov", serif;
+  font-family: "Fjalla One", sans-serif;
   animation-duration: 2s;
   opacity: 0;
   background: darkred;
@@ -178,7 +178,7 @@
   padding: 20% 5%;
 }
 .thank-you-wrapper h1 {
-  font-family: "Volkhov", serif;
+  font-family: "Fjalla One", sans-serif;
   font-size: 3em;
   margin-block-start: 0;
 }
