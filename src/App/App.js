@@ -13,6 +13,8 @@ import Singers from "../Singers/Singers";
 import News from "../News/News";
 import { OperaContextProvider } from "../OperaContext";
 import NewsItem from "../News/NewsItem";
+import Gallery from "../Gallery/Gallery";
+import Image from "../Image/Image";
 class App extends Component {
   state = {
     isSideNavOpen: false
@@ -69,6 +71,8 @@ class App extends Component {
               <Route path="/who-we-are" component={Singers} />
               <Route exact path="/news" component={News} />
               <Route path="/news/:newsItemId" component={NewsItem} />
+              <Route exact path="/gallery" component={Gallery} />
+              <Route path="/gallery/:image" component={Image} />
             </OperaContextProvider>
           </Switch>
         </Router>
