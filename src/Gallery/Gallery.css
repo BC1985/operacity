@@ -9,7 +9,7 @@
 .gallery-wrapper {
   position: relative;
   background: var(--bg-color);
-  padding: 20% 15%;
+  padding: 20% 5%;
   color: white;
   height: 150vh;
   z-index: 2;
