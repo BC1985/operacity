@@ -1,4 +1,4 @@
-.date-wrapper {
+.program-wrapper {
   padding: 15% 10%;
 }
 
@@ -91,7 +91,7 @@
 
 /* Landscape */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-  .date-wrapper {
+  .program-wrapper {
     padding: 10% 10% 5%;
   }
   .program-shape {
@@ -112,7 +112,7 @@
 
 /* Landscape */
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
-  .date-wrapper {
+  .program-wrapper {
     padding: 10% 10% 5%;
   }
   .program-shape {
@@ -133,7 +133,7 @@
 
 /* Landscape */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
-  .date-wrapper {
+  .program-wrapper {
     padding: 10% 10% 5%;
   }
   .program-shape {
@@ -208,16 +208,24 @@
 
 /* ----------- Retina Screens ----------- */
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
-  .date-wrapper {
+  .program-wrapper {
     font-size: 0.8em;
   }
 }
 /* ----------- Retina Screens ----------- */
 @media screen and (min-device-width: 1600px) {
-  .date-wrapper {
+  .program-wrapper {
     font-size: 0.4em;
     padding: 10%;
   }
+  .program-title {
+    font-size: 2em;
+    font-family: "Fjalla One", sans-serif;
+  }
+  .schedule-container {
+    margin: 0 20% 0 20%;
+  }
+
   .program-header,
   .info-container {
     font-size: 1.5em;
