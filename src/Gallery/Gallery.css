@@ -1,11 +1,139 @@
+.thumbnails-container {
+  padding: 10px;
+  display: grid;
+  column-count: 2;
+  column-gap: 4px;
+  row-gap: 4px;
+  grid-auto-rows: 100px;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+}
+
+.img-container-normal {
+  grid-column: span 2;
+}
+.img-container-tall {
+  width: 100%;
+  grid-column: span 2;
+  grid-row: span 2;
+}
 .thumbnails-container img {
   width: 100%;
-  margin: 10px;
+  height: 100%;
+  border: 2px solid rgb(63, 61, 61);
+}
+.thumbnails-container img:hover {
+  filter: blur(3px);
+}
+
+.gallery {
+  font-family: "Fjalla One", sans-serif;
+  text-align: center;
 }
 
 .gallery-wrapper {
-  position: relative;
-  padding: 20% 5%;
-  height: 100vh;
-  z-index: 2;
+  padding: 5%;
+}
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .gallery-wrapper {
+    padding: 10% 5%;
+  }
+  .thumbnails-container {
+    padding: 10px;
+    display: grid;
+    column-count: 2;
+    column-gap: 4px;
+    row-gap: 4px;
+    grid-auto-rows: 100px;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  }
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  .thumbnails-container {
+    padding: 10px;
+    display: grid;
+    column-count: 3;
+    column-gap: 4px;
+    row-gap: 4px;
+    grid-auto-rows: 100px;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  }
+  .gallery-wrapper {
+    padding: 10% 5%;
+  }
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  .gallery-wrapper {
+    padding: 10% 5%;
+  }
+}
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+  .gallery-wrapper {
+    padding: 10%;
+  }
+  .gallery {
+    margin: 5% auto 10%;
+  }
+  .thumbnails-container {
+    padding: 10px;
+    display: grid;
+    column-count: 3;
+    column-gap: 4px;
+    row-gap: 4px;
+    grid-auto-rows: 100px;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  }
+}
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .thumbnails-container {
+    padding: 10px;
+    display: grid;
+    column-count: 2;
+    column-gap: 2px;
+    row-gap: 2px;
+    grid-auto-rows: 100px;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  }
 }
