@@ -1,0 +1,9 @@
+.single-image-wrapper {
+  width: 100%;
+  padding: 5%;
+}
+.single-image img {
+  border: 2px solid black;
+  height: 100%;
+  width: 100%;
+}
