@@ -2,49 +2,14 @@
   --bg-color: rgb(45, 44, 49);
 }
 .wrapper {
+  padding: 5%;
   position: relative;
   background: var(--bg-color);
-  padding: 20% 15%;
   color: white;
-  height: 100vh;
-  z-index: 2;
 }
-.form-container form {
-  display: flex;
-  flex-direction: column;
-}
-.form-input {
-  background: var(--bg-color);
-  display: block;
-  border: none;
-  padding: 10px 0;
-  border-bottom: rgb(255, 255, 255, 0.5) 1px solid;
-  color: white;
-  font-size: 1em;
-}
-.form-input:focus {
-  outline-style: none;
-}
-.form-container label {
-  margin: 10px 0;
-}
-#submit-button {
-  margin: 40px 0;
-  font-size: 1em;
-  padding: 10px 30px;
-  background: rgb(230, 226, 13);
-  font-weight: bold;
-  border: none;
-  color: rgb(136, 60, 17);
-}
-
 .logo-container {
   text-align: center;
 }
-#logo-sm {
-  font-size: 2em;
-}
-
 .logo-container p {
   margin-block-start: 0;
   margin-block-end: 0;
@@ -54,33 +19,125 @@
   font-size: 2em;
   z-index: 1;
 }
-/* shape */
-.square {
-  width: 30vw;
-  height: 30%;
-  position: absolute;
-  top: 0;
-  left: 30vh;
-  background: rgba(155, 128, 10, 0.4);
-  z-index: -1;
+#logo-sm {
+  font-size: 2em;
+}
+.form-container form {
+  display: flex;
+  flex-direction: column;
 }
 .form-label {
   position: relative;
-  font-size: 16px;
+  font-size: 1em;
   left: 0;
-  top: 35px;
   color: whitesmoke;
   transition: all 0.3s ease-out;
 }
-
+.form-input {
+  background: var(--bg-color);
+  display: block;
+  border: none;
+  border-bottom: rgb(255, 255, 255, 0.5) 1px solid;
+  color: white;
+  font-size: 1em;
+}
+.form-input:focus {
+  outline-style: none;
+}
 .focused {
-  font-size: 0.85rem;
   color: #999;
   transform: translateY(-150%);
 }
+#submit-button {
+  font-size: 1em;
+  background: rgb(230, 226, 13);
+  font-weight: bold;
+  border: none;
+  color: rgb(136, 60, 17);
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .wrapper {
+    padding: 20% 15%;
+    height: 100vh;
+  }
+  .logo-container p {
+    margin-bottom: 20px;
+    font-size: 2em;
+  }
+  .form-input {
+    padding: 10px 0;
+    /* top: 20px; */
+  }
+
+  .form-container label {
+    margin: 10px 0;
+  }
+
+  #submit-button {
+    margin: 50px 0;
+    padding: 10px 30px;
+  }
+  /* shape */
+  .square {
+    width: 30vw;
+    height: 30%;
+    position: absolute;
+    top: 0;
+    left: 30vh;
+    background: rgba(155, 128, 10, 0.4);
+    z-index: -1;
+  }
+  .form-label {
+    position: relative;
+    font-size: 1em;
+    left: 0;
+    top: 40px;
+    color: whitesmoke;
+    transition: all 0.3s ease-out;
+  }
+  .focused {
+    font-size: 0.8em;
+    color: #999;
+    transform: translateY(-150%);
+  }
+}
+/* mobile Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .form-container {
+    width: 70%;
+    height: 100%;
+  }
+  .logo-container p {
+    margin-bottom: 20px;
+
+    font-size: 2em;
+  }
+  .form-container label {
+    margin: 10px 0;
+  }
+  .form-label {
+    font-size: 1em;
+    top: 30px;
+    left: 0;
+  }
+  .focused {
+    font-size: 0.8em;
+  }
+
+  #submit-button {
+    margin: 50px 0 5px;
+    padding: 10px 30px;
+  }
+}
+
 /* ------- iphone 6+, 7+, 8+ and iPhone ---------- X */
 /*   Landscape  */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .wrapper {
+    padding: 5% 15%;
+    position: relative;
+  }
   /* shape */
   .square {
     width: 30vw;
@@ -91,12 +148,242 @@
     background: rgba(155, 128, 10, 0.4);
     z-index: -1;
   }
+  .subscribe-header h1 {
+    margin-block-end: 0;
+  }
+  .form-label {
+    top: 30px;
+  }
+
+  .focused {
+    font-size: 0.8em;
+  }
+  .form-container label {
+    margin: 10px 0;
+  }
+  .form-input {
+    height: 30px;
+    width: 50%;
+  }
+  #submit-button {
+    margin: 50px 0 5px;
+    padding: 10px 30px;
+  }
+}
+/* ----------- iPhone X ----------- */
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 811px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+}
+/* ---------- iPad --------------- */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
   .wrapper {
-    padding: 7% 15%;
+    height: 100%;
+    padding: 10% 20%;
   }
   .subscribe-header h1 {
-    font-size: 1.3em;
     text-align: center;
-    margin-block-end: 0;
+  }
+
+  .square {
+    width: 30vw;
+    height: 20%;
+    position: absolute;
+    top: 0;
+    left: 30vh;
+    background: rgba(155, 128, 10, 0.4);
+    z-index: -1;
+  }
+
+  .form-container {
+    padding-bottom: 30%;
+  }
+  .form-input {
+    height: 30px;
+    margin-bottom: 20px;
+  }
+  .form-label {
+    top: 20px;
+  }
+  #submit-button {
+    margin: 30px 0 5px;
+    padding: 10px 30px;
+  }
+
+  .logo-container p {
+    font-size: 3em;
+  }
+
+  #logo-sm {
+    font-size: 3em;
+  }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .wrapper {
+    padding: 30% 20%;
+  }
+  .square {
+    width: 30vw;
+    height: 30%;
+    position: absolute;
+    top: 0;
+    left: 30vh;
+    background: rgba(155, 128, 10, 0.4);
+    z-index: -1;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 813px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+}
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+  .wrapper {
+    padding: 5% 15%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+  .square {
+    width: 20vw;
+    height: 40%;
+    position: absolute;
+    top: 0;
+    left: 50vh;
+    background: rgba(155, 128, 10, 0.4);
+    z-index: -1;
+  }
+  .form-container label {
+    margin: 5px 0;
+    font-size: 1em;
+  }
+  .form-label {
+    top: 30px;
+  }
+  .form-input {
+    height: 30px;
+  }
+  #submit-button {
+    margin: 50px 0 5px;
+    padding: 10px 30px;
+  }
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+}
+/* ----------- Non-Retina Screens ----------- */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 5% 15%;
+    height: 100vh;
+  }
+  /* logo */
+  .logo-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .subscribe-header h1 {
+    font-size: 1.7em;
+  }
+
+  #logo-sm {
+    font-size: 2em;
+  }
+  .form-container {
+    width: 50%;
+    font-size: 1em;
+  }
+  .form-container label {
+    margin: 5px 0;
+    font-size: 0.5em;
+  }
+  #submit-button {
+    margin: 50px 0 5px;
+    padding: 10px 30px;
+  }
+
+  /* .focused {
+    font-size: 0.3em;
+  } */
+}
+
+/*  ------------ Desktop ---------- */
+@media screen and (min-device-width: 1600px) {
+  .wrapper {
+    padding: 5% 15%;
+    height: 100vh;
+  }
+  /* logo */
+  .logo-container {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .subscribe-header h1 {
+    font-size: 1.2em;
+  }
+  .square {
+    width: 20vw;
+    height: 60%;
+    position: absolute;
+    top: 0;
+    right: 10vh;
+    background: rgba(155, 128, 10, 0.4);
+    z-index: 1;
+  }
+
+  #logo-sm {
+    font-size: 2em;
+  }
+  .form-container {
+    font-size: 0.6em;
+  }
+  .form-container label {
+    margin: 5px 0;
+  }
+  .form-label {
+    top: 15px;
+  }
+  .form-input {
+    width: 50%;
+  }
+  .focused {
+    font-size: 0.7em;
+    margin-bottom: 50px;
+  }
+  #submit-button {
+    font-size: 0.8em;
+    margin: 20px 0 5px;
+    padding: 5px 10px;
+  }
+  #submit-button:hover {
+    color: rgb(230, 226, 13);
+    background-color: rgb(136, 60, 17);
   }
 }
