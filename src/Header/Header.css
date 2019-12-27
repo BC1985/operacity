@@ -27,7 +27,6 @@
 .header-content p {
   font-size: 1.2em;
   line-height: 1.25;
-  margin: 20px 50px;
   color: white;
   z-index: 2;
   font-family: "Fjalla One", sans-serif;
@@ -55,12 +54,9 @@
 .header-content {
   position: relative;
   height: 80vh;
-  margin: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  text-align: center;
   align-items: center;
 }
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
@@ -266,5 +262,31 @@
   }
   .btn {
     font-size: 1.5em;
+  }
+}
+/* ----------- Non-Retina Screens ----------- */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+}
+@media screen and (min-device-width: 1600px) {
+  .header {
+    background-position: bottom;
+  }
+  #logo {
+    color: white;
+    font-size: 3em;
+    bottom: 50vh;
+    position: absolute;
+  }
+  .btn {
+    font-size: 0.7em;
+    padding: 5px 10px;
+    box-shadow: 1px 1px 20px 1px rgb(31, 29, 29);
+  }
+  .btn:hover {
+    background-color: orange;
+    color: var(--btn-color);
+  }
+  .header-content {
+    font-size: 0.7em;
   }
 }
