@@ -82,6 +82,7 @@
   }
   .landscape-nav-links a {
     transition: color 0.3s;
+    cursor: pointer;
   }
   .landscape-nav-links a:hover {
     color: gray;
