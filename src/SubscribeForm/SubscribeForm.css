@@ -49,11 +49,27 @@
   transform: translateY(-150%);
 }
 #submit-button {
+  cursor: pointer;
   font-size: 1em;
   background: rgb(230, 226, 13);
   font-weight: bold;
   border: none;
   color: rgb(136, 60, 17);
+}
+#submit-button:disabled {
+  font-size: 1em;
+  background: gray;
+  font-weight: bold;
+  border: none;
+  color: white;
+}
+#submit-button:disabled:hover {
+  cursor: pointer;
+  font-size: 1em;
+  background: rgb(83, 81, 81);
+  font-weight: bold;
+  border: none;
+  color: white;
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
