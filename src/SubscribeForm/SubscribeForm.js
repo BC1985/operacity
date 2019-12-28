@@ -4,12 +4,11 @@ import "./SubscribeForm.css";
 function SubscribeForm() {
   const [activeNameField, setActiveNameField] = useState(false);
   const [activeEmailField, setActiveEmailField] = useState(false);
-  const [inputs, setInputs] = useState({});
+  const [emailError, setEmailError] = useState(false);
+  const [nameError, setNameError] = useState(false);
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
 
-  const handleInputChange = e => {
-    e.persist();
-    setInputs(inputs => ({ ...inputs, [e.target.name]: e.target.value }));
-  };
   let nameLabelClass = "form-label";
   if (activeNameField) {
     nameLabelClass = "form-label focused";
@@ -18,6 +17,16 @@ function SubscribeForm() {
   if (activeEmailField) {
     emailLabelClass = "form-label focused";
   }
+
+  const validateInputs = e => {
+    e.preventDefault();
+    const validEmail = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    !email.match(validEmail) ? setEmailError(true) : setEmailError(false);
+    const validName = /^[a-zA-Z ]*$/;
+    !name.match(validName) || name === ""
+      ? setNameError(true)
+      : setNameError(false);
+  };
 
   const checkEmailInput = e => {
     if (e.target.value !== "") {
@@ -33,6 +42,11 @@ function SubscribeForm() {
       setActiveNameField(false);
     }
   };
+  // disable button until input fields are populated
+  const isDisabled = () => {
+    return email.length === 0 || name.length === 0 ? true : false;
+  };
+
   return (
     <div className="wrapper">
       <div className="logo-container">
@@ -44,37 +58,46 @@ function SubscribeForm() {
         <h1>Get notified on upcoming events</h1>
       </div>
       <div className="form-container">
-        <form>
+        <form onSubmit={validateInputs}>
           <label htmlFor="full-name" className={nameLabelClass}>
             Name
           </label>
           <input
             className="form-input"
             type="text"
+            value={name}
             name="full_name"
             id="full-name"
             onFocus={() => setActiveNameField(true)}
-            onChange={handleInputChange}
-            // onBlur={() => setActiveNameField(false)}
+            onChange={e => setName(e.target.value)}
             onBlur={checkNameInput}
           />
+          {nameError ? "Please enter valid name" : ""}
 
           <label htmlFor="email" className={emailLabelClass}>
             Email
           </label>
-
           <input
             className="form-input"
             type="text"
             id="email"
             name="email"
+            value={email}
             onFocus={() => setActiveEmailField(true)}
             onBlur={checkEmailInput}
-            // onBlur={() => setActiveEmailField(false)}
-            onChange={handleInputChange}
+            onChange={e => setEmail(e.target.value)}
           />
+          {emailError ? "Please enter valid email" : ""}
         </form>
-        <button id="submit-button">Sign me up</button>
+        <button
+          id="submit-button"
+          type="submit"
+          onClick={validateInputs}
+          disabled={isDisabled()}
+        >
+          Sign me up
+        </button>
+        <div className="subscribe-push"></div>
       </div>
     </div>
   );
