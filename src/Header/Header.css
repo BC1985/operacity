@@ -274,7 +274,7 @@
   #logo {
     color: white;
     font-size: 3em;
-    bottom: 50vh;
+    top: 25%;
     position: absolute;
   }
   .btn {
