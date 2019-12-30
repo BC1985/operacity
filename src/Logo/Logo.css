@@ -1,0 +1,30 @@
+.logo-container {
+  text-align: center;
+  z-index: 2;
+  margin-top: 10vh;
+}
+
+#logo {
+  color: white;
+  font-size: 4em;
+  margin-bottom: 2px;
+  position: relative;
+  bottom: -10px;
+}
+.logo-header {
+  font-weight: bold;
+  font-family: "Dancing Script", cursive;
+  color: white;
+  font-weight: 700;
+  font-size: 3em;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-bottom: 7%;
+  text-shadow: white 5px 0 20px;
+}
+.logo-tagline {
+  color: white;
+  margin-block-start: 0;
+  margin-bottom: 5%;
+  font-family: "Fjalla One", sans-serif;
+}
