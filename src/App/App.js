@@ -27,6 +27,11 @@ class App extends Component {
   render() {
     const routes = [
       {
+        to: "/",
+        name: "Home",
+        onClick: this.openSideNav
+      },
+      {
         to: "/about",
         name: "About us",
         onClick: this.openSideNav
