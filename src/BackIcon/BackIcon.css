@@ -1,0 +1,27 @@
+.back-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin: 5% 0;
+  font-family: "Fjalla One", sans-serif;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: transform ease 0.3s;
+}
+.back-icon:hover {
+  opacity: 1;
+  transform: translate(-5px);
+}
+
+.back-icon p {
+  margin-left: 5px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.wrapper a {
+  text-decoration: none;
+}
+
+.far.fa-hand-point-left {
+  font-size: 2em;
+}
