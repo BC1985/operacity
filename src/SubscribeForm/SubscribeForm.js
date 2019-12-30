@@ -115,7 +115,6 @@ function SubscribeForm() {
           {isLoading && <Spinner />}
         </button>
         <BackIcon />
-        <div className="subscribe-push"></div>
       </div>
     </div>
   );
