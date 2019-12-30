@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import BackIcon from "../BackIcon/BackIcon";
 import "./Gallery.css";
-
 export const urls = [
   {
     url: "https://i.picsum.photos/id/508/2955/3892.jpg",
@@ -75,6 +75,7 @@ const Gallery = () => {
     <div className="gallery-wrapper">
       <h1 className="gallery">Gallery</h1>
       <div className="thumbnails-container">{thumbnails}</div>
+      <BackIcon />
     </div>
   );
 };
