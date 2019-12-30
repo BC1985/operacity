@@ -1,14 +1,18 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import "./SubscribeForm.css";
-
+import BackIcon from "../BackIcon/BackIcon";
+import Spinner from "../Spinner/Spinner";
 function SubscribeForm() {
   const [activeNameField, setActiveNameField] = useState(false);
   const [activeEmailField, setActiveEmailField] = useState(false);
-  const [emailError, setEmailError] = useState(false);
-  const [nameError, setNameError] = useState(false);
+  const [isEmailError, setisEmailError] = useState(false);
+  const [isNameError, setisNameError] = useState(false);
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
+  let history = useHistory();
   let nameLabelClass = "form-label";
   if (activeNameField) {
     nameLabelClass = "form-label focused";
@@ -18,16 +22,26 @@ function SubscribeForm() {
     emailLabelClass = "form-label focused";
   }
 
-  const validateInputs = e => {
-    e.preventDefault();
-    const validEmail = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    !email.match(validEmail) ? setEmailError(true) : setEmailError(false);
+  const validateName = e => {
+    setName(e.target.value);
     const validName = /^[a-zA-Z ]*$/;
     !name.match(validName) || name === ""
-      ? setNameError(true)
-      : setNameError(false);
+      ? setisNameError(true)
+      : setisNameError(false);
   };
 
+  const validateEmail = e => {
+    setEmail(e.target.value);
+    const validEmail = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    !email.match(validEmail) ? setisEmailError(true) : setisEmailError(false);
+  };
+  const onSubmit = () => {
+    setIsLoading(true);
+    setTimeout(() => {
+      history.push("/");
+    }, 3000);
+  };
+  const buttonText = !isLoading ? "Sign me up" : "Please wait...";
   const checkEmailInput = e => {
     if (e.target.value !== "") {
       setActiveEmailField(true);
@@ -44,9 +58,14 @@ function SubscribeForm() {
   };
   // disable button until input fields are populated
   const isDisabled = () => {
-    return email.length === 0 || name.length === 0 ? true : false;
+    return email.length === 0 ||
+      name.length === 0 ||
+      isLoading ||
+      isEmailError ||
+      isNameError
+      ? true
+      : false;
   };
-
   return (
     <div className="wrapper">
       <div className="logo-container">
@@ -54,11 +73,10 @@ function SubscribeForm() {
         <p>Operacity</p>
       </div>
       <div className="subscribe-header">
-        <div className="square"></div>
         <h1>Get notified on upcoming events</h1>
       </div>
       <div className="form-container">
-        <form onSubmit={validateInputs}>
+        <form onSubmit={onSubmit}>
           <label htmlFor="full-name" className={nameLabelClass}>
             Name
           </label>
@@ -69,10 +87,10 @@ function SubscribeForm() {
             name="full_name"
             id="full-name"
             onFocus={() => setActiveNameField(true)}
-            onChange={e => setName(e.target.value)}
+            onChange={validateName}
             onBlur={checkNameInput}
           />
-          {nameError ? "Please enter valid name" : ""}
+          {isNameError ? "Please enter valid name" : ""}
 
           <label htmlFor="email" className={emailLabelClass}>
             Email
@@ -85,18 +103,20 @@ function SubscribeForm() {
             value={email}
             onFocus={() => setActiveEmailField(true)}
             onBlur={checkEmailInput}
-            onChange={e => setEmail(e.target.value)}
+            onChange={validateEmail}
           />
-          {emailError ? "Please enter valid email" : ""}
+          {isEmailError ? "Please enter valid email" : ""}
         </form>
         <button
           id="submit-button"
           type="submit"
-          onClick={validateInputs}
+          onClick={onSubmit}
           disabled={isDisabled()}
         >
-          Sign me up
+          {buttonText}
+          {isLoading && <Spinner />}
         </button>
+        <BackIcon />
         <div className="subscribe-push"></div>
       </div>
     </div>
