@@ -17,7 +17,6 @@
   font-family: "Dancing Script", cursive;
   font-weight: bold;
   font-size: 2em;
-  z-index: 1;
 }
 #logo-sm {
   font-size: 2em;
@@ -94,16 +93,6 @@
     margin: 50px 0;
     padding: 10px 30px;
   }
-  /* shape */
-  .square {
-    width: 30vw;
-    height: 30%;
-    position: absolute;
-    top: 0;
-    left: 30vh;
-    background: rgba(155, 128, 10, 0.4);
-    z-index: -1;
-  }
   .form-label {
     position: relative;
     font-size: 1em;
@@ -154,16 +143,6 @@
     padding: 5% 15%;
     position: relative;
   }
-  /* shape */
-  .square {
-    width: 30vw;
-    height: 40%;
-    position: absolute;
-    top: 0;
-    left: 60vh;
-    background: rgba(155, 128, 10, 0.4);
-    z-index: -1;
-  }
   .subscribe-header h1 {
     margin-block-end: 0;
   }
@@ -206,16 +185,6 @@
     text-align: center;
   }
 
-  .square {
-    width: 30vw;
-    height: 20%;
-    position: absolute;
-    top: 0;
-    left: 30vh;
-    background: rgba(155, 128, 10, 0.4);
-    z-index: -1;
-  }
-
   .form-container {
     padding-bottom: 30%;
   }
@@ -245,15 +214,6 @@
   .wrapper {
     padding: 30% 20%;
   }
-  .square {
-    width: 30vw;
-    height: 30%;
-    position: absolute;
-    top: 0;
-    left: 30vh;
-    background: rgba(155, 128, 10, 0.4);
-    z-index: -1;
-  }
 }
 
 /* Landscape */
@@ -270,15 +230,6 @@
     flex-direction: column;
     justify-content: center;
     align-content: center;
-  }
-  .square {
-    width: 20vw;
-    height: 40%;
-    position: absolute;
-    top: 0;
-    left: 50vh;
-    background: rgba(155, 128, 10, 0.4);
-    z-index: -1;
   }
   .form-container label {
     margin: 5px 0;
@@ -364,15 +315,6 @@
   .subscribe-header h1 {
     font-size: 1.2em;
   }
-  .square {
-    width: 20vw;
-    height: 60%;
-    position: absolute;
-    top: 0;
-    right: 10vh;
-    background: rgba(155, 128, 10, 0.4);
-    z-index: 1;
-  }
 
   #logo-sm {
     font-size: 2em;
@@ -394,7 +336,7 @@
     margin-bottom: 50px;
   }
   #submit-button {
-    font-size: 0.8em;
+    font-size: 1em;
     margin: 20px 0 5px;
     padding: 5px 10px;
   }
