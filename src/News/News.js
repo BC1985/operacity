@@ -2,6 +2,7 @@ import React from "react";
 import "./News.css";
 import { Link } from "react-router-dom";
 import { newsItems } from "./newsData";
+import BackIcon from "../BackIcon/BackIcon";
 
 const mainItems = newsItems.filter(item => item.id % 2 === 0);
 const sideItems = newsItems.filter(item => item.id % 2 !== 0);
@@ -37,6 +38,7 @@ function News() {
       </div>
       <div className="main-stories">{items}</div>
       <div className="side">{sideStories}</div>
+      <BackIcon />
     </div>
   );
 }

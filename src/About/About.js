@@ -1,6 +1,7 @@
 import React from "react";
 import conductor from "../Images/about-herbig.jpg";
 import "../About/About.css";
+import BackIcon from "../BackIcon/BackIcon";
 function About() {
   return (
     <>
@@ -43,6 +44,7 @@ function About() {
             </p>
           </div>
         </div>
+        <BackIcon />
       </div>
     </>
   );

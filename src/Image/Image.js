@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { urls } from "../Gallery/Gallery";
 import "./Image.css";
+import BackIcon from "../BackIcon/BackIcon";
 
 const Image = () => {
   const { image } = useParams();
@@ -11,6 +12,7 @@ const Image = () => {
     <div className="single-image-wrapper">
       <div className="single-image">
         <img src={thisImage.url} alt={thisImage.desc} />
+        <BackIcon />
       </div>
     </div>
   );

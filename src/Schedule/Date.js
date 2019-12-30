@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import "./Date.css";
 import { OperaContext } from "../OperaContext";
 import { Redirect } from "react-router-dom";
+import BackIcon from "../BackIcon/BackIcon";
 
 function Date() {
   const [selectedShow, setSelectedShow] = useState([]);
@@ -52,6 +53,7 @@ function Date() {
       </div>
       <div className="schedule-container">{info}</div>
       <div className="program-shape"></div>
+      <BackIcon />
     </div>
   );
 }

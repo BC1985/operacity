@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { newsItems } from "./newsData";
 import "./NewsItem.css";
+import BackIcon from "../BackIcon/BackIcon";
 
 function NewsItem() {
   const { newsItemId } = useParams();
@@ -19,6 +20,7 @@ function NewsItem() {
         />
         <p className="news-item-description ">{newsItem.imageDescription}</p>
         <p className="news-item-content">{newsItem.content}</p>
+        <BackIcon />
       </div>
     );
   };
