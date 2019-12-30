@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import "./SubscribeForm.css";
 import BackIcon from "../BackIcon/BackIcon";
 import Spinner from "../Spinner/Spinner";
+import Logo from "../Logo/Logo";
 function SubscribeForm() {
   const [activeNameField, setActiveNameField] = useState(false);
   const [activeEmailField, setActiveEmailField] = useState(false);
@@ -68,10 +69,7 @@ function SubscribeForm() {
   };
   return (
     <div className="wrapper">
-      <div className="logo-container">
-        <i className="fas fa-theater-masks" id="logo-sm"></i>
-        <p>Operacity</p>
-      </div>
+      <Logo />
       <div className="subscribe-header">
         <h1>Get notified on upcoming events</h1>
       </div>
