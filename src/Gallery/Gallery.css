@@ -1,5 +1,4 @@
 .thumbnails-container {
-  padding: 10px;
   display: grid;
   column-count: 2;
   column-gap: 4px;
@@ -49,7 +48,6 @@
     padding: 10% 5%;
   }
   .thumbnails-container {
-    padding: 10px;
     display: grid;
     column-count: 2;
     column-gap: 4px;
@@ -72,7 +70,6 @@
 /* Landscape */
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
   .thumbnails-container {
-    padding: 10px;
     display: grid;
     column-count: 3;
     column-gap: 4px;
@@ -112,7 +109,6 @@
     margin: 5% auto 10%;
   }
   .thumbnails-container {
-    padding: 10px;
     display: grid;
     column-count: 3;
     column-gap: 4px;
@@ -128,7 +124,6 @@
 /* Landscape */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
   .thumbnails-container {
-    padding: 10px;
     display: grid;
     column-count: 2;
     column-gap: 2px;
