@@ -15,6 +15,7 @@ import { OperaContextProvider } from "../OperaContext";
 import NewsItem from "../News/NewsItem";
 import Gallery from "../Gallery/Gallery";
 import Image from "../Image/Image";
+import Footer from "../Footer/Footer";
 class App extends Component {
   state = {
     isSideNavOpen: false
@@ -80,6 +81,7 @@ class App extends Component {
               <Route path="/gallery/:image" component={Image} />
             </OperaContextProvider>
           </Switch>
+          <Footer />
         </Router>
       </div>
     );
