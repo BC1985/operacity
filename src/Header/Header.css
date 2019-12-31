@@ -46,6 +46,32 @@
   justify-content: center;
   align-items: center;
 }
+.quote-wrapper {
+  font-style: italic;
+  color: gray;
+}
+.landing-page-main {
+  padding: 5% 10%;
+  background: #000;
+  color: white;
+}
+
+.main-item-container {
+  position: relative;
+}
+
+.image-blurb {
+  color: white;
+}
+.main-item-header {
+  margin-top: 20%;
+  font-family: "Fjalla One", sans-serif;
+}
+
+.pic {
+  width: 100%;
+  border: 2px solid white;
+}
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
@@ -221,5 +247,19 @@
   }
   .header-content {
     font-size: 0.7em;
+  }
+  .blurb-overlay {
+    padding-left: 5%;
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: #585a5aad;
+  }
+  .main-item-container:hover .blurb-overlay {
+    opacity: 1;
+    pointer-events: none;
   }
 }
