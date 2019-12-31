@@ -43,6 +43,8 @@
   transform: skewY(30deg);
 }
 .news-title {
+  font-size: 1em;
+
   font-family: "Fjalla One", sans-serif;
 }
 .news-title::after {
@@ -50,6 +52,7 @@
   position: absolute;
   background-color: teal;
   border-radius: 50%;
+  z-index: -1;
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
@@ -170,8 +173,8 @@
   .news-title::after {
     top: 30vh;
     left: -5vw;
-    height: 150px;
-    width: 150px;
+    height: 50%;
+    width: 50%;
   }
   .main-stories {
     margin-top: 10%;
@@ -222,6 +225,33 @@
 
 /* Portrait and Landscape */
 @media only screen and (min-device-width: 834px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
+  .news-wrapper {
+    display: flex;
+    padding: 10%;
+  }
+  .main-stories {
+    margin-top: 10%;
+    padding: 0 5% 10% 10%;
+    width: 70%;
+  }
+  .item-container:nth-child(1)::after {
+    content: "";
+    width: 100vw;
+    height: 50%;
+    position: absolute;
+    top: 1;
+    left: 0;
+    background: rgba(140, 150, 10, 0.3);
+    transform-origin: top;
+    z-index: -1;
+    transform: skewY(-20deg);
+  }
+  .news-title::after {
+    top: 30vh;
+    left: -3vw;
+    height: 150px;
+    width: 150px;
+  }
 }
 
 /* Portrait */
@@ -240,6 +270,33 @@
 
 /* Portrait and Landscape */
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+  .news-wrapper {
+    display: flex;
+    padding: 10%;
+  }
+  .main-stories {
+    margin-top: 10%;
+    padding: 0 5% 10% 10%;
+    width: 70%;
+  }
+  .item-container:nth-child(1)::after {
+    content: "";
+    width: 100vw;
+    height: 50%;
+    position: absolute;
+    top: 1;
+    left: 0;
+    background: rgba(140, 150, 10, 0.3);
+    transform-origin: top;
+    z-index: -1;
+    transform: skewY(-20deg);
+  }
+  .news-title::after {
+    top: 30vh;
+    left: -3vw;
+    height: 150px;
+    width: 150px;
+  }
 }
 
 /* Portrait */
@@ -255,9 +312,36 @@
 }
 /* ----------- Non-Retina Screens ----------- */
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .news-wrapper {
+    display: flex;
+    padding: 10%;
+  }
   .content {
     font-size: 1.2em;
     margin-bottom: 5%;
+  }
+  .main-stories {
+    margin-top: 10%;
+    padding: 0 5% 10% 10%;
+    width: 70%;
+  }
+  .item-container:nth-child(1)::after {
+    content: "";
+    width: 100vw;
+    height: 50%;
+    position: absolute;
+    top: 1;
+    left: 0;
+    background: rgba(140, 150, 10, 0.3);
+    transform-origin: top;
+    z-index: -1;
+    transform: skewY(-20deg);
+  }
+  .news-title::after {
+    top: 30vh;
+    left: -3vw;
+    height: 150px;
+    width: 150px;
   }
 }
 @media screen and (min-device-width: 1600px) {
@@ -283,10 +367,6 @@
     font-size: 0.5em;
     font-family: "Baskervville", serif;
   }
-  .news-title {
-    font-size: 1.3em;
-  }
-
   .content,
   .img-description,
   .side-blurb,
@@ -307,8 +387,8 @@
     transform: skewY(-20deg);
   }
   .news-title::after {
-    top: 50vh;
-    left: -10vw;
+    top: 30vh;
+    left: -3vw;
     height: 150px;
     width: 150px;
   }
