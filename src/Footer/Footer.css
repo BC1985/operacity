@@ -1,0 +1,19 @@
+.footer {
+  padding-top: 2%;
+  display: flex;
+  background: rgb(202, 49, 49);
+  color: white;
+  font-size: 0.5em;
+}
+
+.col-1,
+.col-2,
+.sponsors {
+  list-style-type: none;
+  border-right: 1px white solid;
+  padding-right: 3%;
+}
+.sponsors img {
+  color: white;
+  width: 20%;
+}
