@@ -67,6 +67,10 @@ function SubscribeForm() {
       ? true
       : false;
   };
+  const errorStyle = {
+    marginBlockEnd: "0",
+    marginBlockStart: "0"
+  };
   return (
     <div className="wrapper">
       <Logo />
@@ -88,7 +92,9 @@ function SubscribeForm() {
             onChange={validateName}
             onBlur={checkNameInput}
           />
-          {isNameError ? "Please enter valid name" : ""}
+          <p style={errorStyle}>
+            {isNameError ? "Please enter valid name" : ""}
+          </p>
 
           <label htmlFor="email" className={emailLabelClass}>
             Email
@@ -103,7 +109,9 @@ function SubscribeForm() {
             onBlur={checkEmailInput}
             onChange={validateEmail}
           />
-          {isEmailError ? "Please enter valid email" : ""}
+          <p style={errorStyle}>
+            {isEmailError ? "Please enter valid email" : ""}
+          </p>
         </form>
         <button
           id="submit-button"
