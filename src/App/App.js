@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import Header from "../Header/Header";
 import Nav from "../Nav/Nav";
 import "./App.css";
@@ -16,76 +16,69 @@ import NewsItem from "../News/NewsItem";
 import Gallery from "../Gallery/Gallery";
 import Image from "../Image/Image";
 import Footer from "../Footer/Footer";
-class App extends Component {
-  state = {
-    isSideNavOpen: false
+function App() {
+  const [isSideNavOpen, setIsSideNavOpen] = useState(false);
+
+  const openSideNav = () => {
+    setIsSideNavOpen(!isSideNavOpen);
   };
-  openSideNav = () => {
-    this.setState(prevState => {
-      return { isSideNavOpen: !prevState.isSideNavOpen };
-    });
-  };
-  render() {
-    const routes = [
-      {
-        to: "/",
-        name: "Home",
-        onClick: this.openSideNav
-      },
-      {
-        to: "/about",
-        name: "About us",
-        onClick: this.openSideNav
-      },
-      {
-        to: "/program",
-        name: "Program",
-        onClick: this.openSideNav
-      },
-      {
-        to: "/news",
-        name: "News",
-        onClick: this.openSideNav
-      },
-      {
-        to: "/gallery",
-        name: "Gallery",
-        onClick: this.openSideNav
-      },
-      {
-        to: "/who-we-are",
-        name: "Performers",
-        onClick: this.openSideNav
-      }
-    ];
-    return (
-      <div>
-        <Router>
-          <NavToggleButton
-            openSideNav={this.openSideNav}
-            isSideNavOpen={this.state.isSideNavOpen}
-          />
-          <Nav show={this.state.isSideNavOpen} routes={routes} />
-          <LandscapeNav routes={routes} />
-          <Switch>
-            <Header exact path="/" />
-            <Route path="/about" component={About} routes={routes} />
-            <Route path="/subscribe" component={SubscribeForm} />
-            <OperaContextProvider>
-              <Route path="/program" component={Program} />
-              <Route path="/tickets" component={TicketsPurchaseForm} />
-              <Route path="/who-we-are" component={Singers} />
-              <Route exact path="/news" component={News} />
-              <Route path="/news/:newsItemId" component={NewsItem} />
-              <Route exact path="/gallery" component={Gallery} />
-              <Route path="/gallery/:image" component={Image} />
-            </OperaContextProvider>
-          </Switch>
-          <Footer />
-        </Router>
-      </div>
-    );
-  }
+
+  const routes = [
+    {
+      to: "/",
+      name: "Home",
+      onClick: openSideNav
+    },
+    {
+      to: "/about",
+      name: "About us",
+      onClick: openSideNav
+    },
+    {
+      to: "/program",
+      name: "Program",
+      onClick: openSideNav
+    },
+    {
+      to: "/news",
+      name: "News",
+      onClick: openSideNav
+    },
+    {
+      to: "/gallery",
+      name: "Gallery",
+      onClick: openSideNav
+    },
+    {
+      to: "/who-we-are",
+      name: "Performers",
+      onClick: openSideNav
+    }
+  ];
+  return (
+    <div>
+      <Router>
+        <NavToggleButton openSideNav={openSideNav} />
+        <Nav show={isSideNavOpen} routes={routes} />
+        <LandscapeNav routes={routes} />
+        <Switch>
+          <Header exact path="/" />
+          <Route path="/about" component={About} routes={routes} />
+          <Route path="/subscribe" component={SubscribeForm} />
+          <OperaContextProvider>
+            <Route path="/program" component={Program} />
+            <Route path="/tickets" component={TicketsPurchaseForm} />
+            <Route path="/who-we-are" component={Singers} />
+            <Route exact path="/news" component={News} />
+            <Route path="/news/:newsItemId" component={NewsItem} />
+            <Route exact path="/gallery" component={Gallery} />
+            <Route path="/gallery/:image" component={Image} />
+          </OperaContextProvider>
+        </Switch>
+        <Footer />
+      </Router>
+    </div>
+  );
 }
 
 export default App;
