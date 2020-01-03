@@ -7,13 +7,25 @@
 }
 
 .col-1,
-.col-2,
-.sponsors {
+.col-2 {
   list-style-type: none;
   border-right: 1px white solid;
+  padding: 3%;
+  padding-inline-start: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.sponsors {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-weight: bold;
+  padding-inline-start: 3%;
+  list-style-type: none;
   padding-right: 3%;
 }
 .sponsors img {
   color: white;
-  width: 20%;
+  width: 10%;
 }
