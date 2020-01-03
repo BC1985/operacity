@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Header from "../Header/Header";
 import Nav from "../Nav/Nav";
-import "./App.css";
 import NavToggleButton from "../Nav/NavToggleButton";
 import LandscapeNav from "../Nav/LandscapeNav";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
