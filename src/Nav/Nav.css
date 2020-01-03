@@ -4,72 +4,57 @@
   text-decoration: none;
   font-family: "Fjalla One", sans-serif;
 }
+.nav-links {
+  position: fixed;
+  z-index: 3;
+  transform: translateX(-105%);
+  transition: 0.5s;
+  background: rgb(44, 42, 42);
+  color: whitesmoke;
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  margin-block-start: 0;
+}
+.nav-links.open {
+  transform: translateX(0%);
+  transition: 0.5s;
+}
+.nav-links.open li {
+  opacity: 1;
+}
 
+.nav-links li {
+  font-size: 1.2em;
+  margin: 20px;
+  list-style-type: none;
+  font-weight: bold;
+  opacity: 0;
+}
+.nav-links li:nth-child(1) {
+  transition: all 0.5s ease 0.2s;
+}
+.nav-links li:nth-child(2) {
+  transition: all 0.4s ease 0.3s;
+}
+.nav-links li:nth-child(3) {
+  transition: all 0.3s ease 0.4s;
+}
+.nav-links li:nth-child(4) {
+  transition: all 0.2s ease 0.5s;
+}
+.nav-links li:nth-child(5) {
+  transition: all 0.1s ease 0.6s;
+}
+.nav-links li:nth-child(6) {
+  transition: all 0.1s ease 0.7s;
+}
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-  .nav-links {
-    position: fixed;
-    z-index: 3;
-    transform: translateX(-105%);
-    transition: 0.5s;
-    background: rgb(44, 42, 42);
-    color: whitesmoke;
-    display: flex;
-    width: 60%;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: center;
-    margin-block-start: 0;
-  }
-  .nav-links.open {
-    transform: translateX(0%);
-    transition: 0.5s;
-  }
-  .nav-links.open li {
-    opacity: 1;
-  }
-
-  .nav-links li {
-    font-size: 1.2em;
-    margin: 20px;
-    list-style-type: none;
-    font-weight: bold;
-    opacity: 0;
-  }
-  .nav-links li:nth-child(1) {
-    transition: all 0.5s ease 0.2s;
-  }
-  .nav-links li:nth-child(2) {
-    transition: all 0.4s ease 0.3s;
-  }
-  .nav-links li:nth-child(3) {
-    transition: all 0.3s ease 0.4s;
-  }
-  .nav-links li:nth-child(4) {
-    transition: all 0.2s ease 0.5s;
-  }
-  .nav-links li:nth-child(5) {
-    transition: all 0.1s ease 0.6s;
-  }
-  .nav-links li:nth-child(6) {
-    transition: all 0.1s ease 0.7s;
-  }
 }
 /* Landscape */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-  .nav-links {
-    position: absolute;
-    background: transparent;
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    height: 30px;
-    justify-content: center;
-  }
-  .nav-links.open {
-    margin-block-start: 0px;
-    transform: translateX(0%);
-    transition: 1s;
-  }
 }
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 
