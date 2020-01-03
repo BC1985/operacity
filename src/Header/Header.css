@@ -265,6 +265,9 @@
   .header-content {
     font-size: 0.7em;
   }
+  .landing-page-main {
+    padding: 5% 20%;
+  }
   .blurb-overlay {
     padding-left: 5%;
     position: absolute;
@@ -277,6 +280,8 @@
   }
   .main-item-container:hover .blurb-overlay {
     opacity: 1;
+    font-size: 0.8em;
+    width: 100%;
     pointer-events: none;
   }
 }
