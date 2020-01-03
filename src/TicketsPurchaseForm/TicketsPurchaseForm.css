@@ -14,7 +14,7 @@
 }
 
 .ticket-container {
-  margin-top: 10%;
+  margin-top: 20%;
   margin-bottom: 10%;
 }
 .ticket-container h1 {
@@ -249,17 +249,17 @@
   .show-info {
     margin-bottom: 5%;
   }
-  .ticket-container {
+  /* .ticket-container {
     font-size: 0.7em;
     text-align: center;
-  }
+  } */
   .ticket-container h1 {
     margin-bottom: 0;
   }
-  .cart,
+  /* .cart,
   .show-info {
     font-size: 0.5em;
-  }
+  } */
   .cart {
     margin: 0 auto;
     text-align: center;
@@ -283,6 +283,13 @@
   .added-to-cart,
   .remove-button {
     margin-left: 10px;
+    cursor: pointer;
+  }
+  .added-to-cart:focus,
+  .remove-button:focus {
+    outline: none;
+    background-color: gray;
+    color: white;
   }
   .button-div {
     display: flex;
@@ -296,16 +303,16 @@
     width: 30%;
   }
 
-  .tooltip-add,
+  /* .tooltip-add,
   .tooltip-remove {
     font-size: 0.5em;
-  }
+  } */
   .thank-you-wrapper {
     padding: 10%;
   }
-  .thank-you-wrapper p {
+  /* .thank-you-wrapper p {
     font-size: 0.8em;
-  }
+  } */
   .cropped-image-container {
     background-position: center;
     margin-bottom: 5%;
