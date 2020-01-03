@@ -1,21 +1,24 @@
 .social-media-icons {
+  margin: 5% 25%;
   padding-inline-start: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
   list-style-type: none;
   color: white;
   z-index: 1;
-  width: 10%;
+  width: 100%;
   cursor: pointer;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .icon {
   position: absolute;
   transition: ease 0.2s;
   transition-property: font-size, color;
 }
-.icon:hover {
-  color: orange;
-  font-size: 1.5em;
+@media screen and (min-device-width: 1600px) {
+  .icon:hover {
+    color: orange;
+    font-size: 1.5em;
+  }
 }
