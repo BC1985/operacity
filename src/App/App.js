@@ -57,7 +57,10 @@ function App() {
   return (
     <div>
       <Router>
-        <NavToggleButton openSideNav={openSideNav} />
+        <NavToggleButton
+          openSideNav={openSideNav}
+          isSideNavOpen={isSideNavOpen}
+        />
         <Nav show={isSideNavOpen} routes={routes} />
         <LandscapeNav routes={routes} />
         <Switch>
