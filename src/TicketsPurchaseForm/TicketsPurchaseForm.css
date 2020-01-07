@@ -14,13 +14,14 @@
 }
 
 .ticket-container {
-  margin-top: 20%;
+  margin-top: 5%;
   margin-bottom: 10%;
+  text-align: center;
 }
-.ticket-container h1 {
+/* .ticket-container h1 {
   font-size: 1.5em;
   margin-bottom: 10%;
-}
+} */
 
 .tickets-quantity {
   display: flex;
@@ -250,16 +251,18 @@
     margin-bottom: 5%;
   }
   /* .ticket-container {
-    font-size: 0.7em;
     text-align: center;
-  } */
+    margin-top: 10%;
+  }
   .ticket-container h1 {
     margin-bottom: 0;
-  }
-  /* .cart,
-  .show-info {
-    font-size: 0.5em;
   } */
+  .cart,
+  .show-info,
+  .tooltip-add,
+  .tooltip-remove {
+    font-size: 0.8em;
+  }
   .cart {
     margin: 0 auto;
     text-align: center;
@@ -310,9 +313,6 @@
   .thank-you-wrapper {
     padding: 10%;
   }
-  /* .thank-you-wrapper p {
-    font-size: 0.8em;
-  } */
   .cropped-image-container {
     background-position: center;
     margin-bottom: 5%;
