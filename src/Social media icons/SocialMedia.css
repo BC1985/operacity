@@ -1,15 +1,16 @@
 .social-media-icons {
-  margin: 5% 25%;
+  margin: 10% 25%;
+
   padding-inline-start: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
   list-style-type: none;
   color: white;
   z-index: 1;
-  width: 100%;
+  width: 25%;
   cursor: pointer;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 .icon {
   position: absolute;
