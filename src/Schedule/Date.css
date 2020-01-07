@@ -197,13 +197,6 @@
   .info-container {
     font-size: 1.5em;
   }
-  /* shapes */
-  .program-header::before {
-    height: 0;
-  }
-  .program-header::after {
-    height: 0;
-  }
   .tickets-btn {
     font-size: 1em;
     padding: 5px 10px;
