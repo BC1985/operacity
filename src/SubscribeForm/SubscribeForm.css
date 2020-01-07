@@ -34,6 +34,7 @@
   color: #999;
   transform: translateY(-150%);
 }
+
 #submit-button {
   cursor: pointer;
   font-size: 1em;
@@ -58,6 +59,10 @@
   color: white;
 }
 
+#submit-button {
+  margin: 15% 0 10%;
+  padding: 10px 30px;
+}
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   .wrapper {
     padding: 2% 15%;
@@ -72,10 +77,6 @@
     margin: 10px 0;
   }
 
-  #submit-button {
-    margin: 15% 0 10%;
-    padding: 10px 30px;
-  }
   .form-label {
     position: relative;
     font-size: 1em;
@@ -113,7 +114,32 @@
     padding: 10px 30px;
   }
 }
+/* ----------- Galaxy S4, S5 and Note 3 ----------- */
 
+/* Portrait and Landscape */
+@media screen and (min-device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+  .wrapper {
+    padding: 10%;
+  }
+}
+
+/* Portrait */
+@media screen and (min-device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+  .form-container {
+    padding-bottom: 30%;
+  }
+  .form-input {
+    height: 30px;
+    margin-bottom: 20px;
+  }
+  .form-label {
+    top: 20px;
+  }
+}
+
+/* Landscape */
+@media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+}
 /* ------- iphone 6+, 7+, 8+ and iPhone ---------- X */
 /*   Landscape  */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
