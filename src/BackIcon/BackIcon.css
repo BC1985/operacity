@@ -25,3 +25,8 @@
 .far.fa-hand-point-left {
   font-size: 2em;
 }
+@media screen and (min-device-width: 1600px) {
+  .back-icon {
+    display: none;
+  }
+}
