@@ -35,7 +35,6 @@ function Footer() {
       <ul className="col-1">
         <li>Contact</li>
         <li>Program</li>
-        <li>Sponsors</li>
         <li>News</li>
         <li>Gallery</li>
       </ul>
