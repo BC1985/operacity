@@ -19,6 +19,7 @@
   margin-block-start: 0;
 }
 .nav-links.open {
+  box-shadow: 1px 1px 30px 20px rgb(53, 49, 49);
   transform: translateX(0%);
   transition: 0.5s;
 }
