@@ -32,6 +32,8 @@
 }
 .focused {
   color: #999;
+  transform: translateX(-20%);
+  font-size: 0.8em;
 }
 
 #submit-button {
@@ -124,7 +126,7 @@
 }
 
 /* Portrait */
-@media screen and (min-device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
   .form-container {
     padding-bottom: 30%;
   }
@@ -133,6 +135,7 @@
     /* margin-bottom: 20px; */
   }
   .form-label {
+    /* transition: all 0.3s ease; */
     top: 15px;
   }
   .focused {
@@ -202,6 +205,10 @@
   }
   .form-label {
     top: 20px;
+  }
+  .focused {
+    font-size: 0.7em;
+    transform: translateY(-150%);
   }
   #submit-button {
     margin: 30px 0 5px;
