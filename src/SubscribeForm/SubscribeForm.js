@@ -68,8 +68,8 @@ function SubscribeForm() {
       : false;
   };
   const errorStyle = {
-    marginBlockEnd: "0",
-    marginBlockStart: "0"
+    fontSize: "0.8em",
+    fontStyle: "italic"
   };
   return (
     <div className="wrapper">
