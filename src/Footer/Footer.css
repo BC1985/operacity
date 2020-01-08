@@ -10,13 +10,12 @@
 .col-2,
 .sponsors {
   list-style-type: none;
-  border-right: 1px white solid;
   padding-right: 2%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   margin-block-start: 0;
-  padding-inline-start: 1%;
+  padding-inline-start: 3%;
 }
 .sponsors {
   font-weight: bold;
