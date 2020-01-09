@@ -196,6 +196,7 @@
   text-align: center;
 }
 
+/* tooltip animation */
 @keyframes topFadeOut {
   0% {
     position: absolute;
@@ -219,7 +220,6 @@
     top: 5%;
   }
 }
-
 @keyframes bottomFadeOut {
   0% {
     position: absolute;
@@ -242,6 +242,93 @@
     opacity: 0;
   }
 }
+/* iPhone 6,7,8 Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .tickets-wrapper {
+    padding: 10% 10%;
+  }
+  .cropped-image-container {
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(0 0, 0 100%, 100% 80%, 100% 0);
+    height: 70vh;
+    width: 100%;
+  }
+}
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  .cropped-image-container {
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(0 0, 0 100%, 100% 80%, 100% 0);
+    height: 70vh;
+    width: 100%;
+  }
+}
+
+/* ----------- iPad Pro 10.5" ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 834px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* Portrait */
+
+@media only screen and (min-device-width: 834px) and (max-device-width: 834px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* Landscape */
+
+@media only screen and (min-device-width: 1112px) and (max-device-width: 1112px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+  .cropped-image-container {
+    background-position: center;
+    margin-bottom: 5%;
+    background-size: cover;
+  }
+}
+
+/* Portrait */
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .tickets-wrapper {
+    padding: 2% 10%;
+    height: 100vh;
+  }
+}
+
+/* Landscape */
+
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .tickets-wrapper {
+    padding: 2% 10%;
+    height: 100vh;
+  }
+}
+/* ----------- Non-Retina Screens ----------- */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .cropped-image-container {
+    /* background-position: center; */
+    margin-bottom: 5%;
+    background-size: cover;
+  }
+  .tickets-wrapper {
+    padding: 5% 10% 10%;
+    height: 100vh;
+  }
+}
+
 @media screen and (min-device-width: 1600px) {
   .tickets-wrapper {
     padding: 5% 10%;
