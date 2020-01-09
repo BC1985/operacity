@@ -15,6 +15,7 @@ import NewsItem from "../News/NewsItem";
 import Gallery from "../Gallery/Gallery";
 import Image from "../Image/Image";
 import Footer from "../Footer/Footer";
+import ErrorBoundary from "../ErrorBoundary";
 function App() {
   const [isSideNavOpen, setIsSideNavOpen] = useState(false);
 
@@ -69,7 +70,9 @@ function App() {
           <Route path="/subscribe" component={SubscribeForm} />
           <OperaContextProvider>
             <Route path="/program" component={Program} />
-            <Route path="/tickets" component={TicketsPurchaseForm} />
+            <ErrorBoundary>
+              <Route path="/tickets" component={TicketsPurchaseForm} />
+            </ErrorBoundary>
             <Route path="/who-we-are" component={Singers} />
             <Route exact path="/news" component={News} />
             <Route path="/news/:newsItemId" component={NewsItem} />
