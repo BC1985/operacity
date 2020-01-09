@@ -16,6 +16,7 @@
   justify-content: space-evenly;
   margin-block-start: 0;
   padding-inline-start: 3%;
+  flex: 0;
 }
 .sponsors {
   font-weight: bold;
@@ -23,5 +24,12 @@
 .sponsors img {
   color: white;
   margin-top: 1%;
-  width: 10%;
+  width: 100%;
+}
+.social-media-footer {
+  display: flex;
+  padding-inline-start: 3%;
+  flex-direction: column;
+  list-style-type: none;
+  justify-content: space-around;
 }

@@ -49,6 +49,17 @@ function Footer() {
         <p style={{ marginBlockStart: "0" }}>Sponsors</p>
         {sponsors}
       </ul>
+      <ul className="social-media-footer">
+        <li>
+          <i className="fab fa-twitter" id="twitter-icon"></i>
+        </li>
+        <li>
+          <i className="fab fa-facebook-square" id="facebook-icon"></i>
+        </li>
+        <li>
+          <i className="fab fa-instagram" id="instagram-icon"></i>
+        </li>
+      </ul>
     </footer>
   );
 }
