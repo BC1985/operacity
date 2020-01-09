@@ -102,8 +102,8 @@
 
   .singer-name {
     clip-path: var(--name-plate);
-    height: 50px;
-    width: 50%;
+    height: 70px;
+    width: 100%;
   }
   .headshot {
     max-width: 100%;
