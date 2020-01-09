@@ -137,7 +137,7 @@ function Tickets(props) {
         <p className="inner_show-date">{showDate}</p>
         <p className="inner_show-time">{showTime}</p>
       </div>
-      <div style={{ marginTop: "15%" }}>
+      <div style={{ marginTop: "20vh" }}>
         {!boughtTickets ? (
           <>
             <NumberOfTickets ticketType={ticketType} />
