@@ -97,7 +97,7 @@ function SubscribeForm() {
           </p>
 
           <label htmlFor="email" className={emailLabelClass}>
-            Email
+            Email*
           </label>
           <input
             className="form-input"
@@ -113,6 +113,10 @@ function SubscribeForm() {
             {isEmailError ? "Please enter valid email" : ""}
           </p>
         </form>
+        <p style={{ fontSize: "0.8em", width: "70%", marginLeft: "10%" }}>
+          * Only simulates backend operation, your email will not be seen or
+          used
+        </p>
         <button
           id="submit-button"
           type="submit"
