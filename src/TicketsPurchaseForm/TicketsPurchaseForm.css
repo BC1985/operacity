@@ -119,7 +119,6 @@
 }
 .show-info {
   color: var(--font-color);
-  margin-bottom: 20%;
 }
 
 .inner_opera-name {
@@ -254,6 +253,9 @@
     height: 70vh;
     width: 100%;
   }
+  .show-info {
+    margin-bottom: 10%;
+  }
 }
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
 
@@ -335,7 +337,7 @@
     height: 100vh;
   }
   .show-info {
-    margin-bottom: 5%;
+    margin-bottom: 10%;
   }
   /* .ticket-container {
     text-align: center;
@@ -363,7 +365,7 @@
   }
   .cart h3 {
     margin: 20px 0;
-    height: 60px;
+    height: 90px;
     padding: 3% 10% 5%;
   }
   .cart p {
