@@ -22,4 +22,8 @@
     color: orange;
     font-size: 1.5em;
   }
+  .social-media-icons {
+    margin: 3% 25%;
+    width: 5%;
+  }
 }
