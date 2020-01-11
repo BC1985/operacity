@@ -257,8 +257,8 @@
     transition-property: background-color, color;
   }
   .btn:hover {
-    background-color: orange;
-    color: var(--btn-color);
+    background-color: #ffa805;
+    color: #550609;
   }
 
   .landing-page-main {
