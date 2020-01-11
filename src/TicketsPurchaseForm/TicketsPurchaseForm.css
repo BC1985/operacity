@@ -31,7 +31,7 @@
 }
 #place-order-btn {
   position: relative;
-  background: var(--btn-color);
+  background: #84060c;
   color: whitesmoke;
   font-size: 1em;
   font-weight: bold;
@@ -55,7 +55,7 @@
 }
 .added-to-cart {
   background-color: rgb(250, 175, 37);
-  color: firebrick;
+  color: #4e0d0d;
   margin-left: 5%;
   padding: 5px 10px;
   border: none;
