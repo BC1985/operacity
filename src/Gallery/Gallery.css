@@ -132,3 +132,9 @@
     grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
   }
 }
+
+@media screen and (min-device-width: 1600px) {
+  .gallery-wrapper {
+    padding: 10% 20% 15%;
+  }
+}
