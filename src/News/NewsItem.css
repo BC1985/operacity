@@ -180,15 +180,7 @@
     height: 200px;
     width: 200px;
   }
-  .news-item-content,
-  .news-item-description {
-    font-size: 0.8em;
-  }
-
-  .news-item-heading {
-    font-size: 1.5em;
-  }
-  .news-item-blurb {
-    font-size: 1em;
+  .news-item-content {
+    line-height: 1.5em;
   }
 }

@@ -252,8 +252,6 @@
     background: var(--overlay-gradient);
   }
   .btn {
-    font-size: 0.7em;
-    padding: 5px 10px;
     box-shadow: 1px 1px 20px 1px rgb(31, 29, 29);
     transition: background-color ease 0.3s;
     transition-property: background-color, color;
@@ -262,9 +260,7 @@
     background-color: orange;
     color: var(--btn-color);
   }
-  .header-content {
-    font-size: 0.7em;
-  }
+
   .landing-page-main {
     padding: 5% 20%;
   }
