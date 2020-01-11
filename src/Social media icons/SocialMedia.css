@@ -18,7 +18,7 @@
   transition-property: font-size, color;
 }
 @media screen and (min-device-width: 1600px) {
-  .icon:hover {
+  i.icon:hover {
     color: orange;
     font-size: 1.5em;
   }
