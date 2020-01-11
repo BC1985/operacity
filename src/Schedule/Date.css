@@ -182,15 +182,14 @@
 /* ----------- Retina Screens ----------- */
 @media screen and (min-device-width: 1600px) {
   .program-wrapper {
-    font-size: 0.4em;
-    padding: 10%;
+    padding: 10% 5%;
   }
   .program-title {
-    font-size: 2em;
     font-family: "Fjalla One", sans-serif;
   }
   .schedule-container {
     margin: 0 20% 0 20%;
+    font-size: 0.8em;
   }
 
   .program-header,
@@ -199,6 +198,5 @@
   }
   .tickets-btn {
     font-size: 1em;
-    padding: 5px 10px;
   }
 }
