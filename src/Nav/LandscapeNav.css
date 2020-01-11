@@ -100,10 +100,6 @@
 @media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
 }
 @media screen and (min-device-width: 1600px) {
-  .landscape-nav-links {
-    font-size: 0.5em;
-    height: 30px;
-  }
   .landscape-nav-links a {
     transition: color 0.3s;
     cursor: pointer;
