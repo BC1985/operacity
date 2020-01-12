@@ -6,8 +6,7 @@
 }
 
 .col-1,
-.col-2,
-.sponsors {
+.col-2 {
   list-style-type: none;
   padding-right: 2%;
   display: flex;
@@ -17,16 +16,9 @@
   padding-inline-start: 3%;
   flex: 0;
 }
-.sponsors {
-  font-weight: bold;
-}
-.sponsors img {
-  color: white;
-  margin-top: 1%;
-  width: 100%;
-}
 .social-media-footer {
   display: flex;
+  margin-block-start: 0;
   padding-inline-start: 3%;
   flex-direction: column;
   list-style-type: none;
